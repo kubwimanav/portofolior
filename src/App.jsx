@@ -3,17 +3,29 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import heroimag from "./assets/images/hero-imag.jpg"
 import aboutimg from "./assets/images/about-img.jpg";
+import design2 from "./assets/images/design2.jpg";
+import design1 from "./assets/images/design1.jpg";
+import website1 from "./assets/images/website1.jpg";
 import './App.css'
+import ModelSearch from './ModelSearch';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [openModel, setOpenModel] = useState(false);
+
+  const handlemadal = () =>
+  {
+    setOpenModel(!openModel)
+    }
+
+
+
 
   return (
     <>
       <div className="Website-container">
-	
+        {openModel && <ModelSearch handlemadal={ handlemadal} />}
 
-        <div className="home" id="home">
+        <section className="home" id="home">
 	
 	
           <nav className="navbar">
@@ -33,7 +45,9 @@ function App() {
               <button className="btn contact-btn">Contact</button>
             </a>
 
-            <div className="menu-btn">
+            <div className="menu-btn" 
+              onClick={handlemadal}
+            >
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
@@ -55,8 +69,8 @@ function App() {
             </div>
           </div>
 
-        </div>
-        <div className="about" id="about">
+        </section>
+        <section className="about" id="about">
 	
 	
           <div className="about-image">
@@ -79,9 +93,9 @@ function App() {
           </div>
 	
 
-        </div>
+        </section>
 
-        <div className="services reusable" id="services">
+        <section className="services reusable" id="services">
 	
 	
           <header className="headings">
@@ -146,9 +160,9 @@ function App() {
           </div>
 	
 
-        </div>
+        </section>
 
-        <div className="resume reusable" id="resume">
+        <section className="resume reusable" id="resume">
 	
 	
           <header className="headings">
@@ -222,9 +236,9 @@ function App() {
           </div>
 	
 
-        </div>
+        </section>
 
-        <div className="portfolio reusable" id="portfolio">
+        <section className="portfolio reusable" id="portfolio">
 	
 
           <header className="headings">
@@ -248,21 +262,21 @@ function App() {
 			
 			
               <div className="item design">
-                <img src="images/design1.jpg" />
+                <img src={design1 }/>
                 <div className="overlay">
                   <a href="https://vinc-klab-kubwimanav.vercel.app/">VIEW Project</a>
                 </div>
               </div>
 			
               <div className="item design">
-                <img src="images/design2.jpg" />
+                <img src={design2} />
                 <div className="overlay">
                   <a href="https://vincent-to-do-app.vercel.app">VIEW To Do</a>
                 </div>
               </div>
 			
               <div className="item code">
-                <img src="images/website1.jpg" />
+                <img src={website1} />
                 <div className="overlay">
                   <a href="https://boostify-tube-network-frontend.vercel.app">VIEW Project</a>
                 </div>
@@ -274,9 +288,9 @@ function App() {
 
           </main>
 
-        </div>
+        </section>
 
-        <div className="testimonials reusable" id="testimonials">
+        <section className="testimonials reusable" id="testimonials">
 	
 	
           <header className="headings">
@@ -448,8 +462,8 @@ function App() {
           </div>
 	
 
-        </div>
-        <div className="contact-form" id="contactForm">
+        </section>
+        <section className="contact-form" id="contactForm">
           <div className="contact-row">
 	
             <div className="contact-col column-1">
@@ -488,7 +502,7 @@ function App() {
 
 
           </div>
-        </div>
+        </section>
         <div className="page-footer">
 	
           <div className="footer-contents">

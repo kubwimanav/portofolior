@@ -1,0 +1,13 @@
+.model{
+    padding: 80px 70px 10px 50px;
+}
+.model-links{
+position: fixed;
+top:0;
+left: 0;
+bottom: 0;
+z-index: 8888;
+background-color: #2B2B2B;
+right: 0;
+animation: scroll From Right 1S ease;
+}
