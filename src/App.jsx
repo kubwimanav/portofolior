@@ -10,6 +10,10 @@ import { FaCode } from "react-icons/fa";
 import { MdNoPhotography } from "react-icons/md";
 import { MdGraphicEq } from "react-icons/md";
 import { IoMdWifi } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
+import { FaWhatsappSquare} from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
 import { FaMobileScreenButton } from "react-icons/fa6";
 import { SiAntdesign } from "react-icons/si";
 
@@ -576,12 +580,13 @@ function App() {
                     className="input"
                     name="subject"
                     placeholder="enter subject"
-                    {...register('subject', {
+                    {...register("subject", {
                       required: {
-                      value:true,
-                    }})}
+                        value: true,
+                      },
+                    })}
                   />
-                  {errors.subject&&<p>subject is required</p>}
+                  {errors.subject && <p>subject is required</p>}
                 </div>
               </form>
             </div>
@@ -594,7 +599,9 @@ function App() {
                     name="subject"
                     placeholder="Type Your Message"
                   ></textarea>
-                 
+                  <button className="sendbutton" id="sendButton" type="submit">
+                    MESSAGE ME
+                  </button>
                   <p id="errorText" className="error-text"></p>
                 </div>
               </form>
@@ -623,6 +630,7 @@ function App() {
                 >
                   <input
                     type="email"
+                    className='footer-email'
                     name="email"
                     placeholder="Enter your email"
                     {...register("email", {
@@ -632,18 +640,24 @@ function App() {
                     })}
                   />
                   {errors.name && <p>email is required</p>}
-                  <button type="submit">Subscribe</button>
+                  <button type="submit" className='footer-buttond'>Subscribe</button>
                 </form>
               </div>
               <div>
                 <h3>Follow Me</h3>
                 <p>let be social</p>
-                {/* <div className="contactSocialMedia">
-                  <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-                </div> */}
+                <div className="contactSocialMedia">
+                  <a href="#">
+                    <FaWhatsappSquare />
+                  </a>
+                  <a href="#"><FaFacebookF /></a>
+                  <a href="#">
+                    <FaSquareInstagram />
+                  </a>
+                  <a href="#">
+                    <FaLinkedin />
+                  </a>
+                </div>
               </div>
             </div>
 
