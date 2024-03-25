@@ -533,79 +533,79 @@ function App() {
 	
 
         </section> */}
-        <section className="contact-form" id="contactForm">
-          <div className="contact-row">
-            <div className="contact-col column-1">
-              <div className="contactTitle">
-                <h2>Get In Touch</h2>
-                <p>
-                  if you have question or comments, please type here, were here
-                  for you
-                </p>
-              </div>
-
-              <form className="form-1" method="POST" onSubmit={handleSubmit}>
-                <div className="inputGroup">
-                  <input
-                    type="text"
-                    className="input"
-                    name="FullName"
-                    placeholder="Enter Your FullName"
-                    {...register("FullName", {
-                      required: {
-                        value: true,
-                      },
-                    })}
-                  />
-                  {errors.subject && <p>subject is required</p>}
-                </div>
-
-                <div className="inputGroup">
-                  <input
-                    type="email"
-                    className="input"
-                    name="Email"
-                    placeholder="Enter Your Email Address"
-                    {...register("Email", {
-                      required: {
-                        value: true,
-                      },
-                    })}
-                  />
-                  {errors.email && <p>Email Is Required</p>}
-                </div>
-                <div className="inputGroup">
-                  <input
-                    type="text"
-                    className="input"
-                    name="subject"
-                    placeholder="enter subject"
-                    {...register("subject", {
-                      required: {
-                        value: true,
-                      },
-                    })}
-                  />
-                  {errors.subject && <p>subject is required</p>}
-                </div>
-              </form>
+        <section className="portfolio reusable" id="contactForm">
+          <header className="headings">
+            <h3>Contact Us</h3>
+            <h1>Get In Touch</h1>
+            <p>
+              if you have question or comments, please type here, were here for
+              you
+            </p>
+          </header>
+          <div className="contact-one">
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2042014.2644906435!2d30.067304!3d-1.575976!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dc7e0817e278b9%3A0x2e1d372b9292caae!2sByumba!5e0!3m2!1sen!2srw!4v1709229665557!5m2!1sen!2srw"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                className="contact-map"
+              ></iframe>
             </div>
+            <form
+              method="POST"
+              className="contact-inputform"
+              onSubmit={handleSubmit}
+            >
+              <input
+                type="text"
+                className="input"
+                name="FullName"
+                placeholder="Enter Your FullName"
+                {...register("FullName", {
+                  required: {
+                    value: true,
+                  },
+                })}
+              />
+              {errors.subject && <p>subject is required</p>}
 
-            <div className="contact-col column-2">
-              <form className="form-2" method="POST">
-                <div className="inputGroup">
-                  <textarea
-                    className="t"
-                    name="subject"
-                    placeholder="Type Your Message"
-                  ></textarea>
-                  <button className="sendbutton" id="sendButton" type="submit">
-                    MESSAGE ME
-                  </button>
-                  <p id="errorText" className="error-text"></p>
-                </div>
-              </form>
-            </div>
+              <input
+                type="email"
+                className="input"
+                name="Email"
+                placeholder="Enter Your Email Address"
+                {...register("Email", {
+                  required: {
+                    value: true,
+                  },
+                })}
+              />
+              {errors.email && <p>Email Is Required</p>}
+
+              <input
+                type="text"
+                className="input"
+                name="subject"
+                placeholder="enter subject"
+                {...register("subject", {
+                  required: {
+                    value: true,
+                  },
+                })}
+              />
+              {errors.subject && <p>subject is required</p>}
+
+              <textarea
+                className="contact-text"
+                name="subject"
+                placeholder="Type Your Message"
+              ></textarea>
+              <button className="sendbutton" id="sendButton" type="submit">
+                MESSAGE ME
+              </button>
+              <p id="errorText" className="error-text"></p>
+            </form>
           </div>
         </section>
         <div className="page-footer">
@@ -626,21 +626,23 @@ function App() {
                   action="#"
                   method="post"
                   style={{ marginTop: "20px" }}
+                  className='footer-form'
                   onSubmit={handleSubmit}
                 >
                   <input
                     type="email"
-                    className='footer-email'
+                    className="footer-email"
                     name="email"
                     placeholder="Enter your email"
                     {...register("email", {
-                      required: {
-                        value: true,
-                      },
+                      required:true,
+                      
                     })}
                   />
                   {errors.name && <p>email is required</p>}
-                  <button type="submit" className='footer-buttond'>Subscribe</button>
+                  <button type="submit" className="footer-buttond">
+                    Subscribe
+                  </button>
                 </form>
               </div>
               <div>
@@ -650,7 +652,9 @@ function App() {
                   <a href="#">
                     <FaWhatsappSquare />
                   </a>
-                  <a href="#"><FaFacebookF /></a>
+                  <a href="#">
+                    <FaFacebookF />
+                  </a>
                   <a href="#">
                     <FaSquareInstagram />
                   </a>

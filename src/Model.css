@@ -1,13 +1,30 @@
 .model{
-    padding: 80px 70px 10px 50px;
+    padding: 130px 10px 10px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 .model-links{
 position: fixed;
 top:0;
+display: flex;
 left: 0;
 bottom: 0;
 z-index: 8888;
-background-color: #2B2B2B;
+background-color: azure;
 right: 0;
 animation: scroll From Right 1S ease;
+}
+.model-linkss{
+    color: var(--links-clr);
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+.modelclose{
+    margin-top: 80px;
+    font-size: 30px;
+    margin-left: 60px;
+    color: rgb(235, 116, 95);
 }
