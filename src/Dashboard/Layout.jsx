@@ -5,10 +5,10 @@ import DashNavbar from './DashNavbar'
 
 function Layout() {
   return (
-    <div>
-      <DashNavbar />
-      <div style={{display:'flex'}}>
-        <Sidebar />
+    <div style={{ display: "flex" }}>
+      <Sidebar />
+      <div>
+        <DashNavbar />
         <Outlet />
       </div>
     </div>

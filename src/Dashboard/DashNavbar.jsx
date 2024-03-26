@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { IoArrowBackCircleOutline } from "react-icons/io5";
-
+import './Dashstyles/Dashnavbar.css'
 function DashNavbar() {
   return (
-    <div>
+    <div className='navbar'>
+
       <p>Vin© 2024</p>
-      <IoArrowBackCircleOutline />
-      <div>
-        <p>Dashboard</p>
-        <p>vincent@gmail.com</p>
-      </div>
+      
+        
+      <p>vincent@gmail.com</p>
+      
     </div>
   );
 }
