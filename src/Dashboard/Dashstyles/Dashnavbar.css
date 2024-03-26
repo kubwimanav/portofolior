@@ -5,3 +5,7 @@
     width: 196vh;
     padding: 1rem;
 }
+.navbar p{
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
