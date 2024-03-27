@@ -5,6 +5,7 @@ import Services from './Sercvices.jsx';
 import Layout from './Dashboard/Layout.jsx';
 import Home from './Dashboard/Home.jsx';
 import Users from './Dashboard/Users.jsx';
+import Messages from './Dashboard/Messages.jsx';
 
 
 
@@ -26,10 +27,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Services />} />
-          <Route path="dashboard" element={<Layout />}>
+          <Route path="/dashboard" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path='home' element={<Home />} />
+            <Route path="home" element={<Home />} />
             <Route path="users" element={<Users />} />
+            <Route path="messages" element={<Messages />} />
           </Route>
         </Routes>
       </BrowserRouter>

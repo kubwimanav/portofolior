@@ -19,7 +19,7 @@ function Sidebar() {
             <a href="users">Users</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="messages">Contact</a>
           </li>
           <li>
             <a href="">Settings</a>

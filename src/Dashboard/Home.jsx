@@ -50,7 +50,7 @@ const data = [
 const cardinal = curveCardinal.tension(0.2);
     return (
       <>
-        <ResponsiveContainer width="50%" height="50%">
+        <ResponsiveContainer width="50%" height="80%">
           <AreaChart
             width={500}
             height={400}
