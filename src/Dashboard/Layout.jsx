@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import DashNavbar from './DashNavbar'
+import'./Dashstyles/Layout.css'
 
 function Layout() {
   return (

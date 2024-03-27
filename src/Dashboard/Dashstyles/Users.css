@@ -1,0 +1,14 @@
+.placetable td{
+  padding: 21px 50px 21px 50px;
+  
+  font-size: 17px;
+}
+.placetable tr:nth-child(odd) {
+    background-color: rgb(246, 246, 246);
+    border: none;
+  }
+  .placetable tr:nth-child(even) {
+    background-color: white;
+    border: none;
+    border-color: white;
+  }

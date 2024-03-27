@@ -5,6 +5,7 @@
     padding: 1rem 2rem 0rem 2rem;
     display: flex;
     flex-direction: column;
+    position:fixed;
     gap: 40px;
     min-height: 100vh;
 }

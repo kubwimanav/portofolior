@@ -16,7 +16,7 @@ function Sidebar() {
             <a href="">Home</a>
           </li>
           <li>
-            <a href="users">Users</a>
+            <a href="dashboard/users">Users</a>
           </li>
           <li>
             <a href="">Contact</a>
