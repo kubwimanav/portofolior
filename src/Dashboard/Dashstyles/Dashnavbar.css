@@ -10,3 +10,12 @@
     font-size: 13px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.search{
+    line-height: 0;
+        transform: translateY(-3px);
+
+}
+.cisearch{
+        transform: translateX(-20px);
+    line-height: 0px;
+}
