@@ -1,6 +1,6 @@
-import React from 'react'
-import './Dashstyles/Sidebar.css'
-import Sideimage from '../assets/images/hero-imag.jpg'
+import React from "react";
+import "./Dashstyles/Sidebar.css";
+import Sideimage from "../assets/images/hero-imag.jpg";
 function Sidebar() {
   return (
     <div className="sidebar">
@@ -13,10 +13,10 @@ function Sidebar() {
             <a href="">Dashboard</a>
           </li>
           <li>
-            <a href="">Home</a>
+            <a href="home">Home</a>
           </li>
           <li>
-            <a href="dashboard/users">Users</a>
+            <a href="users">Users</a>
           </li>
           <li>
             <a href="">Contact</a>
@@ -33,4 +33,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar
+export default Sidebar;

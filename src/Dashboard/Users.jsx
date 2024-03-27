@@ -141,21 +141,21 @@ function Users() {
       
     ];
   return (
-    <div>
+    <div className="tableuser">
       <p>All users </p>
-      <table>
+      <table className="placetable">
         <thead>
-          <tr className="placetable">
-            <th>id</th>
-            <th>Full Names</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-            <th>Action</th>
+          <tr>
+            <td>id</td>
+            <td>Full Names</td>
+            <td>Email</td>
+            <td>Phone Number</td>
+            <td>Action</td>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr className="placetable">
+            <tr >
               <td>{user.Id}</td>
               <td>{user.Name}</td>
               <td>{user.PhoneNumber}</td>

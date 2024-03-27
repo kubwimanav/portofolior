@@ -8,7 +8,7 @@ function Layout() {
   return (
     <div style={{ display: "flex" }}>
       <Sidebar />
-      <div>
+      <div className='layout'>
         <DashNavbar />
         <Outlet />
       </div>
