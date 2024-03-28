@@ -10,7 +10,7 @@ function Sidebar() {
       <div>
         <ul className="sidebar-1">
           <li>
-            <a href="">Dashboard</a>
+            <a href="home">Dashboard</a>
           </li>
           <li>
             <a href="home">Home</a>
