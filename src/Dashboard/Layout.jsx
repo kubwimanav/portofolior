@@ -6,13 +6,14 @@ import'./Dashstyles/Layout.css'
 
 function Layout() {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="layout">
       <Sidebar />
-      <div className="layout">
+      <div className='outlets'>
         <DashNavbar />
-        <div className='outlets'>
-          <Outlet />
+        <div className='outlet'>
+          <Outlet  /> 
         </div>
+       
       </div>
     </div>
   );

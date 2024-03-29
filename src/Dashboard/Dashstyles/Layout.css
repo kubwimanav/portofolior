@@ -1,8 +1,13 @@
-.layout{
-margin-left: 8.1rem;
-background-color: aliceblue;
+.layout {
+  display: grid;
+  grid-template-rows: 200px 1fr;
 }
-.outlets{
-    background-color: rgb(57, 124, 183);
+.outlets {
+  margin-left: 132px;
+}
 
+.dashboard {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 0;
 }

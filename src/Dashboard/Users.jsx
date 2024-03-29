@@ -142,32 +142,34 @@ function Users() {
     ];
   return (
     <div className="tableuser">
-      <p>All users </p>
-      <table className="placetable">
-        <thead>
-          <tr>
-            <td>id</td>
-            <td>Full Names</td>
-            <td>Email</td>
-            <td>Phone Number</td>
-            <td>Action</td>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user) => (
-            <tr >
-              <td>{user.Id}</td>
-              <td>{user.Name}</td>
-              <td>{user.PhoneNumber}</td>
-              <td>{user.Email}</td>
-              <td>
-                {" "}
-                <MdDeleteForever />
-              </td>
+      {/* <div>
+        <p>All users </p>
+        <table className="placetable">
+          <thead>
+            <tr>
+              <td>id</td>
+              <td>Full Names</td>
+              <td>Email</td>
+              <td>Phone Number</td>
+              <td>Action</td>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr>
+                <td>{user.Id}</td>
+                <td>{user.Name}</td>
+                <td>{user.PhoneNumber}</td>
+                <td>{user.Email}</td>
+                <td>
+                  {" "}
+                  <MdDeleteForever />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div> */}
     </div>
   );
 }
