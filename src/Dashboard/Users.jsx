@@ -142,7 +142,7 @@ function Users() {
     ];
   return (
     <div className="tableuser">
-      {/* <div>
+      <div>
         <p>All users </p>
         <table className="placetable">
           <thead>
@@ -169,7 +169,7 @@ function Users() {
             ))}
           </tbody>
         </table>
-      </div> */}
+      </div>
     </div>
   );
 }
