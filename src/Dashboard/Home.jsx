@@ -78,21 +78,21 @@ function Home(users) {
             <AiOutlineUserAdd className="iconn" />
           </p>
           <p>Users</p>
-          <p>Users</p>
+          <p>40 Users</p>
         </div>
         <div className="usercard">
           <p>
             <FaCampground className="iconn" />
           </p>
           <p>Booking</p>
-          <p> Booking</p>
+          <p>2 Booking</p>
         </div>
         <div className="usercard">
           <p>
             <PiAirplaneBold className="iconn" />
           </p>
           <p> Tours</p>
-          <p> Tours</p>
+          <p> 100 Tours</p>
         </div>
         <div className="usercard">
           <p>
@@ -100,7 +100,7 @@ function Home(users) {
           </p>
           <p>Messages</p>
 
-          <p> Messages</p>
+          <p>30 Messages</p>
         </div>
       </div>
 
@@ -132,7 +132,7 @@ function Home(users) {
 
         <div className="areachart">
           <AreaChart
-            width={500}
+            width={490}
             height={220}
             data={data}
             margin={{

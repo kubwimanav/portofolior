@@ -597,7 +597,7 @@ function Services() {
                 placeholder="Type Your Message"
               ></textarea>
               <button className="sendbutton" id="sendButton" type="submit">
-                MESSAGE ME
+                Message Me
               </button>
               <p id="errorText" className="error-text"></p>
             </form>
@@ -644,16 +644,16 @@ function Services() {
                 <p>let be social</p>
                 <div className="contactSocialMedia">
                   <a href="#">
-                    <FaWhatsappSquare />
+                    <FaWhatsappSquare className="fot-icon" />
                   </a>
                   <a href="#">
-                    <FaFacebookF />
+                    <FaFacebookF className="fot-icon" />
                   </a>
                   <a href="#">
-                    <FaSquareInstagram />
+                    <FaSquareInstagram className="fot-icon" />
                   </a>
                   <a href="#">
-                    <FaLinkedin />
+                    <FaLinkedin className="fot-icon" />
                   </a>
                 </div>
               </div>

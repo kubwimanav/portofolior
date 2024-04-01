@@ -3,7 +3,7 @@
   gap: 20px;
 }
 .usercard {
-  width: 14.5rem;
+  width: 13.5rem;
   height: 8rem;
   border-radius: 12px;
   background-color: rgb(180,223,196);
@@ -17,7 +17,7 @@
 }
 .chartsdash {
   display: flex;
-  gap: 30px;
+  gap: 1px;
 }
 .camps {
   display: flex;

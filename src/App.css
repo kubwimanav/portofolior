@@ -463,6 +463,7 @@ color: #e3e3e8;
 }
 .services-container .service-box:hover.service-box .icon-wrapper{
 	background-color: var(--bg-clr-one);
+	color: rgb(57,107,101);
 }
 .services-container .service-box:hover.service-box .icon-wrapper i{
 	color: var(--primary-clr);
@@ -824,13 +825,14 @@ color: #e3e3e8;
 	background-color: var(--primary-clr);
 	color: var(--bg-clr-one);
 	font-size: 17px;
-	letter-spacing: 1px;
-	text-align: center;
-	cursor: pointer;
-	transition: 0.4s;
+	border-radius: 5px;
 }
 .sendbutton:hover{
-	background-color: var(--text-clr);
+	background-color: white;
+	color: #05555c;
+    /* border-style: solid;
+	border-color: black; */
+	border: 1px solid black;
 }
 /*   *** Contact Section Styling Ends ***   */
 
@@ -855,13 +857,30 @@ color: #e3e3e8;
 }
 .footer-email{
 	width: 60%;
-	padding: 10px 0px 2px 0px;
+	line-height: 0;
+	padding: 10px 0px 4px 0px;
 }
 .footer-buttond{
 	border-radius: 3px;
 	width: 40%;
-	padding: 9px 0px 2px 0px;
+	color: white;
+	line-height: 0;
+	padding: 19px 0px 13px 0px;
+
+	border: none;
+	background-color: #05555c;
 }
+.footer-buttond:hover{
+	border-radius: 3px;
+	width: 40%;
+	color: #05555c;
+	line-height: 0;
+	padding: 19px 0px 13px 0px;
+
+	border: none;
+	background-color: white;
+}
+
 .vinct p{
 margin-top: 10px;
 
@@ -869,6 +888,13 @@ margin-top: 10px;
 .footer-contents h3,ul{
 	color: white;
 
+}
+.fot-icon{
+	margin-top: 3px;
+	color: white;
+}
+.fot-icon:hover{
+	color: #05555c;
 }
 
 .footer-contents a{
@@ -892,7 +918,7 @@ margin-top: 10px;
 	gap: 4px;
 	padding: 20px;
 	border-radius: 7px;
-background-color: rgb(228, 244, 239);
+    background-color: rgb(228, 244, 239);
 
 }
 
@@ -1088,7 +1114,7 @@ background-color: rgb(228, 244, 239);
 
 }
 
-@media (max-width:420px) {
+@media (max-width:480px) {
 	
 .input{
 	width: 20rem;
@@ -1104,10 +1130,33 @@ background-color: rgb(228, 244, 239);
 	border-radius: 10px;
 
 }
+.page-footer{
+	width: 100%;
+}
+}
+
+@media (max-width:420px) {
+	
+.input{
+	width: 18rem;
+	
+}
+.contact-text{
+	height: 7rem;
+	border-radius: 3px;
+}
+.contact-map{
+	width: 20.5rem;
+	height: 15rem;
+	border-radius: 10px;
+
+}
+.page-footer{
+	width: 100%;
+}
 }
 
 
-/*   === Screen Size 350px or Smaller  ===   */
 @media(max-width: 375px){
 	button.contact-btn{
 		display: none;
