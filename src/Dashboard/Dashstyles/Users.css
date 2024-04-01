@@ -1,6 +1,5 @@
 .tableuser{
   width: 100%;
-  /* background-color: brown; */
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -10,6 +9,14 @@
   padding: 21px 50px 21px 50px;
   
   font-size: 13px;
+}
+.delete-icon{
+  font-size: 20px;
+  color: cadetblue;
+
+}
+.delete-icon:hover{
+  color: brown;
 }
 .placetable thead{
   color:rgb(13, 204, 140);
@@ -24,3 +31,8 @@
     border: none;
     border-color: white;
   }
+  .tableuser{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}

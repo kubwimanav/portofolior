@@ -141,8 +141,8 @@ function Users() {
       
     ];
   return (
-    <div className="tableuser">
-      <div>
+
+      <div className="tableuser">
         <p>All users </p>
         <table className="placetable">
           <thead>
@@ -163,14 +163,13 @@ function Users() {
                 <td>{user.Email}</td>
                 <td>
                   {" "}
-                  <MdDeleteForever />
+                  <MdDeleteForever className="delete-icon" />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </div>
   );
 }
 

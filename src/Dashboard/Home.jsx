@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   AreaChart,
   Area,
@@ -9,13 +10,14 @@ import {
   ResponsiveContainer,
 } from "recharts";
 // import "./Camps.css";
+import './Dashstyles/Dashhome.css'
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BiMessageAdd } from "react-icons/bi";
 import { PiAirplaneBold } from "react-icons/pi";
 import { FaCampground } from "react-icons/fa";
 // import { mycontext } from "../../contexts/ContextProvider";
 
-function Home() {
+function Home(users) {
   const data = [
     {
       name: "Page A",
@@ -76,29 +78,29 @@ function Home() {
             <AiOutlineUserAdd className="iconn" />
           </p>
           <p>Users</p>
-          <p> Users</p>
+          <p>Users</p>
         </div>
-        <div className="bookingcard">
+        <div className="usercard">
           <p>
             <FaCampground className="iconn" />
           </p>
           <p>Booking</p>
           <p> Booking</p>
         </div>
-        <div className="tourdashcard">
+        <div className="usercard">
           <p>
             <PiAirplaneBold className="iconn" />
           </p>
           <p> Tours</p>
-          <p>  Tours</p>
+          <p> Tours</p>
         </div>
-        <div className="messagedashcard">
+        <div className="usercard">
           <p>
             <BiMessageAdd className="iconn" />
           </p>
           <p>Messages</p>
 
-          <p>  Messages</p>
+          <p> Messages</p>
         </div>
       </div>
 
@@ -106,8 +108,8 @@ function Home() {
         <div className="areacharts">
           <AreaChart
             className="chart1"
-            width={370}
-            height={200}
+            width={500}
+            height={220}
             data={data}
             margin={{
               right: 30,
@@ -130,8 +132,8 @@ function Home() {
 
         <div className="areachart">
           <AreaChart
-            width={370}
-            height={200}
+            width={500}
+            height={220}
             data={data}
             margin={{
               top: 10,
