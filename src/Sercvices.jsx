@@ -268,28 +268,28 @@ function Services() {
                     work on both the frontend and backend aspects of web
                     development.
                   </p>
-                  <h5 className="vanue">Netlink</h5>
+                  <h5 className="vanue">Klab Rwanda</h5>
                 </div>
 
                 <div className="box">
-                  <h4>2020- 2022</h4>
+                  <h4>2023- 2024</h4>
                   <h3>Front-End Web Developer</h3>
                   <p>
                     creating the user interface and user experience of website
                     or web application. Here are some key skills.
                   </p>
-                  <h5 className="vanue">Development World</h5>
+                  <h5 className="vanue">Klab Rwanda</h5>
                 </div>
 
                 <div className="box">
-                  <h4>2019- 2020</h4>
+                  <h4>2023- 2024</h4>
                   <h3>UI/UX Designer</h3>
                   <p>
                     The main goal as ui/UX designer is to enhance user
                     satisfaction and meet the user's needs and goals while also
                     achieving the objectives of project
                   </p>
-                  <h5 className="vanue">Design House</h5>
+                  <h5 className="vanue">Klab Rwanda</h5>
                 </div>
               </div>
             </div>
@@ -543,7 +543,6 @@ function Services() {
                 className="contact-map"
               ></iframe>
             </div>
-            
 
             <form onSubmit={handleSubmit} className="contact-inputform">
               <input
@@ -655,8 +654,7 @@ function Services() {
 
             <center>
               <p style={{ paddingTop: "2rem" }}>
-                Copy Rights 2023 <span>| All rights reserved</span>Create by
-                Vincent T.
+                © 2024  Vincent T.
               </p>
             </center>
           </div>
