@@ -27,9 +27,7 @@ function Services() {
     setOpenModel(!openModel);
   };
 
-  const form = useForm();
-  const [register, formState, handleSubmit] = form;
-  const errors = formState;
+  const { register, handleSubmit,formState:{errors}} = useForm();
   return (
     <>
       <div className="Website-container">
