@@ -25,3 +25,9 @@
     min-height: 20px;
     border-radius: 10px;
 }
+.sidebar-1 li a:hover{
+    color: blue;
+}
+.sidebar-1 li a:link{
+    color: blue;
+}

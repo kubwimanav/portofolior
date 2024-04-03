@@ -27,11 +27,9 @@ function Services() {
     setOpenModel(!openModel);
   };
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const form = useForm();
+  const [register, formState, handleSubmit] = form;
+  const errors = formState;
   return (
     <>
       <div className="Website-container">
@@ -547,59 +545,57 @@ function Services() {
                 className="contact-map"
               ></iframe>
             </div>
-            <form
-              method="POST"
-              className="contact-inputform"
-              onSubmit={handleSubmit}
-            >
+            
+
+            <form onSubmit={handleSubmit} className="contact-inputform">
               <input
                 type="text"
-                className="input"
                 name="FullName"
                 placeholder="Enter Your FullName"
+                className="input"
                 {...register("FullName", {
                   required: {
                     value: true,
                   },
                 })}
               />
-              {errors.subject && <p>subject is required</p>}
-
+              {errors.FullName && <span>Your FullName is required</span>}
               <input
-                type="email"
-                className="input"
+                type="text"
                 name="Email"
                 placeholder="Enter Your Email Address"
+                className="input"
                 {...register("Email", {
                   required: {
                     value: true,
                   },
                 })}
               />
-              {errors.email && <p>Email Is Required</p>}
-
+              {errors.Email && <span>Your Email is Required</span>}
               <input
                 type="text"
-                className="input"
                 name="subject"
-                placeholder="enter subject"
-                {...register("subject", {
+                placeholder="Enter Subject"
+                className="input"
+                {...register("Subject", {
                   required: {
                     value: true,
                   },
                 })}
               />
-              {errors.subject && <p>subject is required</p>}
-
+              {errors.Subject && <span>Your Subject is Required</span>}
               <textarea
                 className="contact-text"
-                name="subject"
+                name="Message"
                 placeholder="Type Your Message"
-              ></textarea>
-              <button className="sendbutton" id="sendButton" type="submit">
-                Message Me
-              </button>
-              <p id="errorText" className="error-text"></p>
+                {...register("Message", {
+                  required: {
+                    value: true,
+                  },
+                })}
+              />
+              {errors.Message && <span>Your Message is Required</span>}
+              <button className="sendbutton">Submit Your Message</button>
             </form>
           </div>
         </section>

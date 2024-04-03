@@ -824,7 +824,7 @@ color: #e3e3e8;
 	outline: none;
 	background-color: var(--primary-clr);
 	color: var(--bg-clr-one);
-	font-size: 17px;
+	font-size: 14px;
 	border-radius: 5px;
 }
 .sendbutton:hover{

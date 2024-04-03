@@ -6,6 +6,7 @@ import Layout from './Dashboard/Layout.jsx';
 import Home from './Dashboard/Home.jsx';
 import Users from './Dashboard/Users.jsx';
 import Messages from './Dashboard/Messages.jsx';
+import Setting from './Dashboard/Setting.jsx';
 
 
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="users" element={<Users />} />
             <Route path="messages" element={<Messages />} />
+            <Route path='settings' element={<Setting/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

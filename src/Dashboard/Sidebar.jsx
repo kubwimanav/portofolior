@@ -23,7 +23,7 @@ function Sidebar() {
             <Link to="messages">Contact</Link>
           </li>
           <li>
-            <Link to="">Settings</Link>
+            <Link to="settings">Settings</Link>
           </li>
           <li>
             <Link to="">Logout</Link>

@@ -1,0 +1,41 @@
+
+.form-setting{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 2rem;
+    justify-content: space-around;
+}
+.setting{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.input-label{
+display: grid;
+font-size: 13px;
+gap: 5px;
+}
+.input-label input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    
+}
+.input-label button{
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+	background-color: #05555c;
+}
+.input-label button:hover{
+    padding: 10px;
+    border: none;
+    background-color: white;
+    border: 2px solid #05555c;
+    border-radius: 5px;
+    color: #05555c;
+}
