@@ -1,6 +1,7 @@
 import React from "react";
 import "./Dashstyles/Sidebar.css";
 import Sideimage from "../assets/images/hero-imag.jpg";
+import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className="sidebar">
@@ -10,22 +11,22 @@ function Sidebar() {
       <div>
         <ul className="sidebar-1">
           <li>
-            <a href="home">Dashboard</a>
+            <Link to="home">Dashboard</Link>
           </li>
           <li>
-            <a href="home">Home</a>
+            <Link to="home">Home</Link>
           </li>
           <li>
-            <a href="users">Users</a>
+            <Link to="users">Users</Link>
           </li>
           <li>
-            <a href="messages">Contact</a>
+            <Link to="messages">Contact</Link>
           </li>
           <li>
-            <a href="">Settings</a>
+            <Link to="">Settings</Link>
           </li>
           <li>
-            <a href="">Logout</a>
+            <Link to="">Logout</Link>
           </li>
         </ul>
       </div>
