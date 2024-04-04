@@ -896,7 +896,11 @@ margin-top: 10px;
 .fot-icon:hover{
 	color: #05555c;
 }
-
+.errorstext{
+	color: red;
+	font-size: 12px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .footer-contents a{
 	text-decoration: none;
 	font-size: 22px;

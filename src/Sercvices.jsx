@@ -27,7 +27,11 @@ function Services() {
     setOpenModel(!openModel);
   };
 
-  const { register, handleSubmit,formState:{errors}} = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   return (
     <>
       <div className="Website-container">
@@ -346,6 +350,7 @@ function Services() {
                     VIEW Project
                   </a>
                 </div>
+                
               </div>
             </div>
           </main>
@@ -544,7 +549,10 @@ function Services() {
               ></iframe>
             </div>
 
-            <form onSubmit={handleSubmit} className="contact-inputform">
+            <form
+              onSubmit={handleSubmit(onsubmit)}
+              className="contact-inputform"
+            >
               <input
                 type="text"
                 name="FullName"
@@ -556,7 +564,9 @@ function Services() {
                   },
                 })}
               />
-              {errors.FullName && <span>Your FullName is required</span>}
+              {errors.FullName && (
+                <span className="errorstext">Your FullName is required</span>
+              )}
               <input
                 type="text"
                 name="Email"
@@ -568,7 +578,9 @@ function Services() {
                   },
                 })}
               />
-              {errors.Email && <span>Your Email is Required</span>}
+              {errors.Email && (
+                <span className="errorstext">Your Email is Required</span>
+              )}
               <input
                 type="text"
                 name="subject"
@@ -580,7 +592,9 @@ function Services() {
                   },
                 })}
               />
-              {errors.Subject && <span>Your Subject is Required</span>}
+              {errors.Subject && (
+                <span className="errorstext">Your Subject is Required</span>
+              )}
               <textarea
                 className="contact-text"
                 name="Message"
@@ -591,7 +605,9 @@ function Services() {
                   },
                 })}
               />
-              {errors.Message && <span>Your Message is Required</span>}
+              {errors.Message && (
+                <span className="errorstext">Your Message is Required</span>
+              )}
               <button className="sendbutton">Submit Your Message</button>
             </form>
           </div>
@@ -610,7 +626,7 @@ function Services() {
               <div>
                 <h3>Newsletters</h3>
                 <p>stay updated with my latest trend</p>
-                <form
+                {/* <form
                   action="#"
                   method="post"
                   style={{ marginTop: "20px" }}
@@ -630,6 +646,23 @@ function Services() {
                   <button type="submit" className="footer-buttond">
                     Subscribe
                   </button>
+                </form> */}
+                <form >
+                  <input
+                    name="Email"
+                    className="footer-email"
+                    {...register("email", {
+                      required: {
+                        value: true,
+                      },
+                    })}
+                  />
+                  {errors.email && (
+                    <span className="errorstext">
+                      Enter Email before Subscribe
+                    </span>
+                  )}
+                  <button className="footer-buttond"> Subscribe</button>
                 </form>
               </div>
               <div>
@@ -653,9 +686,7 @@ function Services() {
             </div>
 
             <center>
-              <p style={{ paddingTop: "2rem" }}>
-                © 2024  Vincent T.
-              </p>
+              <p style={{ paddingTop: "2rem" }}>© 2024 Vincent T.</p>
             </center>
           </div>
         </div>
