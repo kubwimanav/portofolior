@@ -75,32 +75,34 @@ function Home(users) {
       <div className="campscard">
         <div className="usercard">
           <p>
-            <AiOutlineUserAdd className="iconn" />
+            <AiOutlineUserAdd className="icon" />
           </p>
           <p>Users</p>
           <p>40 Users</p>
         </div>
-        <div className="usercard">
+
+        <div className="usercardd">
+          <p>
+            <PiAirplaneBold className="iconns" />
+          </p>
+          <p> Tours</p>
+          <p> 100 Tours</p>
+        </div>
+
+        <div className="usercards">
+          <p>
+            <BiMessageAdd className="icons" />
+          </p>
+          <p>Messages</p>
+
+          <p>30 Messages</p>
+        </div>
+        <div className="usercardds">
           <p>
             <FaCampground className="iconn" />
           </p>
           <p>Booking</p>
           <p>2 Booking</p>
-        </div>
-        <div className="usercard">
-          <p>
-            <PiAirplaneBold className="iconn" />
-          </p>
-          <p> Tours</p>
-          <p> 100 Tours</p>
-        </div>
-        <div className="usercard">
-          <p>
-            <BiMessageAdd className="iconn" />
-          </p>
-          <p>Messages</p>
-
-          <p>30 Messages</p>
         </div>
       </div>
 

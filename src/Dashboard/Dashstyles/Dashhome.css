@@ -5,20 +5,77 @@
 .usercard {
   width: 13.5rem;
   height: 8rem;
+  border: none;
   border-radius: 12px;
-  background-color: rgb(180,223,196);
+  background-color:#E1F0DA;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 0px 1px;
   align-items: center;
+}
+
+.usercardd{
+  width: 13.5rem;
+  height: 8rem;
+  border: none;
+  border-radius: 12px;
+  background-color:#D4E7C5;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px;
+  align-items: center;
+}
+.usercards {
+  width: 13.5rem;
+  height: 8rem;
+  border: none;
+  border-radius: 12px;
+  background-color:#BFD8AF;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px;
+  align-items: center;
+}
+
+
+
+.usercardds {
+  width: 13.5rem;
+  height: 8rem;
+  border: none;
+  border-radius: 12px;
+  background-color:#99BC85;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px;
+  align-items: center;
+}
+
+.icons {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: #007F73;
+}
+.icon {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: rgb(64,196,99);
 }
 .iconn {
   font-size: 2rem;
   margin-top: 1.5rem;
+  color: white;
+}
+.iconns {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: #416D19;
 }
 .chartsdash {
   display: flex;
   gap: 1px;
 }
+
 .camps {
   display: flex;
   flex-direction: column;
