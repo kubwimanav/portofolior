@@ -1,26 +1,25 @@
-
-
-.sidebar{
+.sidebarsearch{
     background-color: aliceblue;
-    padding: 1rem 2rem 0rem 2rem;
+    padding: 1rem 20rem 0rem 20rem;
     display: flex;
     flex-direction: column;
     position:fixed;
     gap: 40px;
+    max-width: 100%;
     min-height: 100vh;
     box-shadow: 0px 2px 2px;
 }
-.sidebar-1 {
+.sidebarsearch-1 {
     display: grid;
     gap: 30px;
 }
-.sidebar-1 li a{
+.sidebarsearch-1 li a{
     color: cadetblue;
     list-style: none;
     text-decoration: none;
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
-.sidebarimage{
+.sidebarsearchimage{
     width: 50px;
     min-height: 20px;
     border-radius: 10px;
@@ -28,12 +27,12 @@
 /* /* .sidebar-1 li a:hover{
     color: blue;
 } */
-.sidebar-1 li a:hover{
+.sidebarsearch-1 li a:hover{
     color: blue;
 } 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
    .sidebar{
     display: none;
 } 
     
-}
+} */

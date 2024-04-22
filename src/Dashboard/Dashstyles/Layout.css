@@ -11,3 +11,9 @@
   grid-template-columns: 190px 1fr;
   gap: 0;
 }
+@media (max-width:768px) {
+
+.outlets {
+  margin-left: 12px;
+}
+}

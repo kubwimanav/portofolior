@@ -19,6 +19,7 @@
 .search{
     line-height: 0;
         transform: translateY(-3px);
+        z-index: -1;
 
 }
 .cisearch{

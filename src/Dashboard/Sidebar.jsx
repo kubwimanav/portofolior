@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Dashstyles/Sidebar.css";
 import Sideimage from "../assets/images/hero-imag.jpg";
 import { Link } from "react-router-dom";
 function Sidebar() {
+  const [close, setClose] = useState();
+
   return (
     <div className="sidebar">
       <div>

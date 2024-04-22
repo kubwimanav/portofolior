@@ -134,80 +134,7 @@ function Services() {
             </button>
           </div>
         </section>
-
-        <section className="services reusable" id="services">
-          <header className="headings">
-            <h3>Services</h3>
-            <h1>I Provide Awesome Services</h1>
-            <p>
-              At about this time of the year, some after new year’s resolution
-              have been made
-            </p>
-          </header>
-
-          <div className="services-container">
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <SiAntdesign />
-              </div>
-              <h2>Web Design</h2>
-              <p>
-                we facilitate any who wants tobe a aweb designer and also we
-                design web
-              </p>
-            </div>
-
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <FaCode />
-              </div>
-              <h2>Web Development</h2>
-              <p>
-                we facilitate any who wants to be a a web developer and also we
-                develop web
-              </p>
-            </div>
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <MdNoPhotography />
-              </div>
-              <h2>Photograghy</h2>
-              <p>
-                we facilitate any who wants to learn photographics,I am here
-                facilite you
-              </p>
-            </div>
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <MdGraphicEq />
-              </div>
-              <h2>Clipping Path</h2>
-              <p>clipping is better for you do better,I am here facilite you</p>
-            </div>
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <IoMdWifi />
-              </div>
-              <h2>App Interface</h2>
-              <p>
-                we facilitate any who wants to learn app interface,I am here
-                facilite you
-              </p>
-            </div>
-
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <FaMobileScreenButton />
-              </div>
-              <h2>Graphic Design</h2>
-              <p>
-                you future is your's, hard work on design,I am here facilite you
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="resume reusable" id="resume">
+  <section className="resume reusable" id="resume">
           <header className="headings">
             <h3>Resume</h3>
             <h1>Education & Experience</h1>
@@ -299,6 +226,79 @@ function Services() {
             </div>
           </div>
         </section>
+        <section className="services reusable" id="services">
+          <header className="headings">
+            <h3>Services</h3>
+            <h1>I Provide Awesome Services</h1>
+            <p>
+              At about this time of the year, some after new year’s resolution
+              have been made
+            </p>
+          </header>
+
+          <div className="services-container">
+            <div className="service-box">
+              <div className="icon-wrapper">
+                <SiAntdesign />
+              </div>
+              <h2>Web Design</h2>
+              <p>
+                we facilitate any who wants tobe a aweb designer and also we
+                design web
+              </p>
+            </div>
+
+            <div className="service-box">
+              <div className="icon-wrapper">
+                <FaCode />
+              </div>
+              <h2>Web Development</h2>
+              <p>
+                we facilitate any who wants to be a a web developer and also we
+                develop web
+              </p>
+            </div>
+            <div className="service-box">
+              <div className="icon-wrapper">
+                <MdNoPhotography />
+              </div>
+              <h2>Photograghy</h2>
+              <p>
+                we facilitate any who wants to learn photographics,I am here
+                facilite you
+              </p>
+            </div>
+            <div className="service-box">
+              <div className="icon-wrapper">
+                <MdGraphicEq />
+              </div>
+              <h2>Clipping Path</h2>
+              <p>clipping is better for you do better,I am here facilite you</p>
+            </div>
+            <div className="service-box">
+              <div className="icon-wrapper">
+                <IoMdWifi />
+              </div>
+              <h2>App Interface</h2>
+              <p>
+                we facilitate any who wants to learn app interface,I am here
+                facilite you
+              </p>
+            </div>
+
+            <div className="service-box">
+              <div className="icon-wrapper">
+                <FaMobileScreenButton />
+              </div>
+              <h2>Graphic Design</h2>
+              <p>
+                you future is your's, hard work on design,I am here facilite you
+              </p>
+            </div>
+          </div>
+        </section>
+
+      
 
         <section className="portfolio reusable" id="portfolio">
           <header className="headings">
