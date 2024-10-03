@@ -127,14 +127,15 @@ function Services() {
             </div>
             <button className="btn download-btn">
               <span>
-                <a href="vicent_CV.pdf" target="_blank">
+
+                <a href="path-to-your-file/vincent.pdf" download="vincent.pdf">
                   Download my CV
                 </a>
               </span>
             </button>
           </div>
         </section>
-  <section className="resume reusable" id="resume">
+        <section className="resume reusable" id="resume">
           <header className="headings">
             <h3>Resume</h3>
             <h1>Education & Experience</h1>
@@ -298,8 +299,6 @@ function Services() {
           </div>
         </section>
 
-      
-
         <section className="portfolio reusable" id="portfolio">
           <header className="headings">
             <h3>Portfolio</h3>
@@ -350,7 +349,6 @@ function Services() {
                     VIEW Project
                   </a>
                 </div>
-                
               </div>
             </div>
           </main>
@@ -647,7 +645,7 @@ function Services() {
                     Subscribe
                   </button>
                 </form> */}
-                <form >
+                <form>
                   <input
                     name="Email"
                     className="footer-email"
