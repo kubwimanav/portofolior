@@ -56,9 +56,6 @@ function Services() {
               <li>
                 <a href="#portfolio">Portfolio</a>
               </li>
-              <li>
-                <a href="#testimonials">blog</a>
-              </li>
             </ul>
 
             <a href="#contactForm" className="button-wrapper">
