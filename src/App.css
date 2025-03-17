@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
+
 }
 html{
 	scroll-behavior: smooth;
@@ -291,6 +292,8 @@ button.contact-btn{
 	padding: 90px 8% 40px;
 	display: flex;
 	justify-content: space-between;
+	background-color: var(--bg-clr-one);
+
 }
 .about .about-image{
 	position: relative;
@@ -505,7 +508,7 @@ color: #e3e3e8;
 	cursor: pointer;
 	transition: all 0.4s;
 }
-.resume-contents .box:nth-child(3){
+.resume-contents .box:nth-child(4){
 	border-bottom: 0px;
 }
 .resume-contents .box::before{
@@ -763,6 +766,7 @@ color: #e3e3e8;
 	border-radius: 10px;
 
 }
+
 
 
  .contactSocialMedia{

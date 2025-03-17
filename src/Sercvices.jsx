@@ -5,21 +5,13 @@ import aboutimg from "./assets/images/about-img.jpg";
 import design2 from "./assets/images/design2.jpg";
 import design1 from "./assets/images/design1.jpg";
 import website1 from "./assets/images/website1.jpg";
-import { FaCode } from "react-icons/fa";
-import { MdNoPhotography } from "react-icons/md";
-import { MdGraphicEq } from "react-icons/md";
-import { IoMdWifi } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
-import { FaMobileScreenButton } from "react-icons/fa6";
-import { SiAntdesign } from "react-icons/si";
-
 import "./App.css";
 import ModelSearch from "./ModelSearch";
 import { useForm } from "react-hook-form";
-
 function Services() {
   const [openModel, setOpenModel] = useState(false);
 
@@ -49,9 +41,6 @@ function Services() {
               </li>
               <li>
                 <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
               </li>
               <li>
                 <a href="#portfolio">Portfolio</a>
@@ -124,8 +113,7 @@ function Services() {
             </div>
             <button className="btn download-btn">
               <span>
-
-                <a href="path-to-your-file/vincent.pdf" download="vincent.pdf">
+                <a href="../public/my cv-v.pdf" download="my cv-v.pdf">
                   Download my CV
                 </a>
               </span>
@@ -150,7 +138,7 @@ function Services() {
 
               <main className="resume-contents">
                 <div className="box">
-                  <h4>2020 - 2021</h4>
+                  <h4>2022 - 2023</h4>
                   <h3>Data analyist</h3>
                   <p>
                     Data analysts play a crucial role in helping businesses make
@@ -180,6 +168,17 @@ function Services() {
                   </p>
                   <h5 className="vanue">E.S.Rukozo</h5>
                 </div>
+
+                <div className="box">
+                  <h4>2023 - 2024</h4>
+                  <h3>Front-end Developer</h3>
+                  <p>
+                    designed to provide a broad-based education covering various
+                    subjects like: mathematics, science, English or language
+                    arts, social studies, and physical education
+                  </p>
+                  <h5 className="vanue">Klab Rwanda</h5>
+                </div>
               </main>
             </div>
 
@@ -197,7 +196,7 @@ function Services() {
                     work on both the frontend and backend aspects of web
                     development.
                   </p>
-                  <h5 className="vanue">Klab Rwanda</h5>
+                  <h5 className="vanue">Afritec</h5>
                 </div>
 
                 <div className="box">
@@ -220,11 +219,22 @@ function Services() {
                   </p>
                   <h5 className="vanue">Klab Rwanda</h5>
                 </div>
+
+                <div className="box">
+                  <h4>2024- 2024</h4>
+                  <h3>Front-end Developer</h3>
+                  <p>
+                    The main goal as ui/UX designer is to enhance user
+                    satisfaction and meet the user's needs and goals while also
+                    achieving the objectives of project
+                  </p>
+                  <h5 className="vanue">FeliTechnology</h5>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="services reusable" id="services">
+        {/* <section className="services reusable" id="services">
           <header className="headings">
             <h3>Services</h3>
             <h1>I Provide Awesome Services</h1>
@@ -294,7 +304,7 @@ function Services() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="portfolio reusable" id="portfolio">
           <header className="headings">
@@ -320,6 +330,33 @@ function Services() {
               <button className="button" data-filter=".logo">
                 Logo
               </button>
+            </div>
+
+            <div className="gallery">
+              <div className="item design">
+                <img src={design1} />
+                <div className="overlay">
+                  <a href="https://vinc-klab-kubwimanav.vercel.app/">
+                    VIEW Project
+                  </a>
+                </div>
+              </div>
+
+              <div className="item design">
+                <img src={design2} />
+                <div className="overlay">
+                  <a href="https://vincent-to-do-app.vercel.app">VIEW To Do</a>
+                </div>
+              </div>
+
+              <div className="item code">
+                <img src={website1} />
+                <div className="overlay">
+                  <a href="https://boostify-tube-network-frontend.vercel.app">
+                    VIEW Project
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="gallery">
