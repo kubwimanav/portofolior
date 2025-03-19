@@ -141,6 +141,17 @@ function Services() {
 
               <main className="resume-contents">
                 <div className="box">
+                  <h4>2014 - 2019</h4>
+                  <h3>High School Degree</h3>
+                  <p>
+                    designed to provide a broad-based education covering various
+                    subjects like: Mathematics, Computer science, Economics and
+                    Entrepreneur ship
+                  </p>
+                  <h5 className="vanue">E.S.Rukozo</h5>
+                </div>
+
+                <div className="box">
                   <h4>2022 - 2023</h4>
                   <h3>Data analyist</h3>
                   <p>
@@ -148,6 +159,16 @@ function Services() {
                     informed choices and optimize their operations.
                   </p>
                   <h5 className="vanue">co-herverster ministry</h5>
+                </div>
+
+                <div className="box">
+                  <h4>2023 - 2024</h4>
+                  <h3>Front-end Developer</h3>
+                  <p>
+                    You attended a 4-month training program at kLab Rwanda,
+                    where you gained experience working as a frontend developer
+                  </p>
+                  <h5 className="vanue">Klab Rwanda</h5>
                 </div>
 
                 <div className="box">
@@ -160,28 +181,6 @@ function Services() {
                   </p>
                   <h5 className="vanue"> University of Rwanda</h5>
                 </div>
-
-                <div className="box">
-                  <h4>2014 - 2019</h4>
-                  <h3>High School Degree</h3>
-                  <p>
-                    designed to provide a broad-based education covering various
-                    subjects like: mathematics, science, English or language
-                    arts, social studies, and physical education
-                  </p>
-                  <h5 className="vanue">E.S.Rukozo</h5>
-                </div>
-
-                <div className="box">
-                  <h4>2023 - 2024</h4>
-                  <h3>Front-end Developer</h3>
-                  <p>
-                    designed to provide a broad-based education covering various
-                    subjects like: mathematics, science, English or language
-                    arts, social studies, and physical education
-                  </p>
-                  <h5 className="vanue">Klab Rwanda</h5>
-                </div>
               </main>
             </div>
 
@@ -192,22 +191,13 @@ function Services() {
 
               <div className="resume-contents">
                 <div className="box">
-                  <h4>2022- 2023</h4>
-                  <h3>Web Developer</h3>
-                  <p>
-                    creating and maintaining websites and web applications. You
-                    work on both the frontend and backend aspects of web
-                    development.
-                  </p>
-                  <h5 className="vanue">Afritec</h5>
-                </div>
-
-                <div className="box">
                   <h4>2023- 2024</h4>
                   <h3>Front-End Web Developer</h3>
                   <p>
-                    creating the user interface and user experience of website
-                    or web application. Here are some key skills.
+                    I attended a 4-month training program at kLab Rwanda, where
+                    i worked as a frontend developer. At the end of the
+                    training, me and my team implemented a project called
+                    Boostify YouTube.
                   </p>
                   <h5 className="vanue">Klab Rwanda</h5>
                 </div>
@@ -216,7 +206,7 @@ function Services() {
                   <h4>2023- 2024</h4>
                   <h3>UI/UX Designer</h3>
                   <p>
-                    The main goal as ui/UX designer is to enhance user
+                    The main goal as UI/UX designer is to enhance user
                     satisfaction and meet the user's needs and goals while also
                     achieving the objectives of project
                   </p>
@@ -227,92 +217,33 @@ function Services() {
                   <h4>2024- 2024</h4>
                   <h3>Front-end Developer</h3>
                   <p>
-                    The main goal as ui/UX designer is to enhance user
-                    satisfaction and meet the user's needs and goals while also
-                    achieving the objectives of project
+                    I have 5 months ofexperience as a frontend developer at
+                    FeliTechnology, where you implemented the dashboard of Feli
+                    Express, a car rental company. The dashboard is used to
+                    manage all company transactions
                   </p>
                   <h5 className="vanue">FeliTechnology</h5>
+                </div>
+
+                <div className="box">
+                  <h4>2025- 2025</h4>
+                  <h3>Web Developer</h3>
+                  <p>
+                    creating and maintaining websites and web applications. I
+                    work on both the frontend and backend aspects of web
+                    development. I implimented a project called Event Managment System.
+                  </p>
+                  <h5 className="vanue">Afritec</h5>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        {/* <section className="services reusable" id="services">
-          <header className="headings">
-            <h3>Services</h3>
-            <h1>I Provide Awesome Services</h1>
-            <p>
-              At about this time of the year, some after new year’s resolution
-              have been made
-            </p>
-          </header>
-
-          <div className="services-container">
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <SiAntdesign />
-              </div>
-              <h2>Web Design</h2>
-              <p>
-                we facilitate any who wants tobe a aweb designer and also we
-                design web
-              </p>
-            </div>
-
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <FaCode />
-              </div>
-              <h2>Web Development</h2>
-              <p>
-                we facilitate any who wants to be a a web developer and also we
-                develop web
-              </p>
-            </div>
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <MdNoPhotography />
-              </div>
-              <h2>Photograghy</h2>
-              <p>
-                we facilitate any who wants to learn photographics,I am here
-                facilite you
-              </p>
-            </div>
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <MdGraphicEq />
-              </div>
-              <h2>Clipping Path</h2>
-              <p>clipping is better for you do better,I am here facilite you</p>
-            </div>
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <IoMdWifi />
-              </div>
-              <h2>App Interface</h2>
-              <p>
-                we facilitate any who wants to learn app interface,I am here
-                facilite you
-              </p>
-            </div>
-
-            <div className="service-box">
-              <div className="icon-wrapper">
-                <FaMobileScreenButton />
-              </div>
-              <h2>Graphic Design</h2>
-              <p>
-                you future is your's, hard work on design,I am here facilite you
-              </p>
-            </div>
-          </div>
-        </section> */}
 
         <section className="portfolio reusable" id="portfolio">
           <header className="headings">
             <h3>Portfolio</h3>
-            <h1>Our latest featured projects</h1>
+            <h1>My latest featured projects</h1>
             <p>
               how are in extremely love with eco friendly system and thinks
               which is better in your future life
