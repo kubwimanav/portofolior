@@ -5,6 +5,9 @@ import aboutimg from "./assets/images/about-img.jpg";
 import design2 from "./assets/images/design2.jpg";
 import design1 from "./assets/images/design1.jpg";
 import website1 from "./assets/images/website1.jpg";
+import website2 from "./assets/images/website2.jpg";
+import website4 from "./assets/images/logo1.jpg";
+import website3 from "./assets/images/website3.jpg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -361,7 +364,7 @@ function Services() {
 
             <div className="gallery">
               <div className="item design">
-                <img src={design1} />
+                <img src={website4} />
                 <div className="overlay">
                   <a href="https://vinc-klab-kubwimanav.vercel.app/">
                     VIEW Project
@@ -370,14 +373,14 @@ function Services() {
               </div>
 
               <div className="item design">
-                <img src={design2} />
+                <img src={website2} />
                 <div className="overlay">
                   <a href="https://vincent-to-do-app.vercel.app">VIEW To Do</a>
                 </div>
               </div>
 
               <div className="item code">
-                <img src={website1} />
+                <img src={website3} />
                 <div className="overlay">
                   <a href="https://boostify-tube-network-frontend.vercel.app">
                     VIEW Project
