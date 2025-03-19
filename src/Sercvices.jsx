@@ -231,7 +231,8 @@ function Services() {
                   <p>
                     creating and maintaining websites and web applications. I
                     work on both the frontend and backend aspects of web
-                    development. I implimented a project called Event Managment System.
+                    development. I implimented a project called Event Managment
+                    System.
                   </p>
                   <h5 className="vanue">Afritec</h5>
                 </div>
@@ -313,9 +314,7 @@ function Services() {
               <div className="item code">
                 <img src={website3} />
                 <div className="overlay">
-                  <a href="https://boostify-tube-network-frontend.vercel.app">
-                    VIEW Project
-                  </a>
+                  <a href="https://event-web-gamma.vercel.app">VIEW Project</a>
                 </div>
               </div>
             </div>
