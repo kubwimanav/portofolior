@@ -271,9 +271,7 @@ function Services() {
               <div className="item design">
                 <img src={design1} />
                 <div className="overlay">
-                  <a href="https://vinc-klab-kubwimanav.vercel.app/">
-                    VIEW Project
-                  </a>
+                  <a href="https://hollday-plan.vercel.app">VIEW Project</a>
                 </div>
               </div>
 
@@ -307,14 +305,18 @@ function Services() {
               <div className="item design">
                 <img src={website2} />
                 <div className="overlay">
-                  <a href="https://vincent-to-do-app.vercel.app">VIEW To Do</a>
+                  <a href="https://dashboard-ruby-iota-75.vercel.app/">
+                    VIEW Project
+                  </a>
                 </div>
               </div>
 
               <div className="item code">
                 <img src={website3} />
                 <div className="overlay">
-                  <a href="https://event-web-gamma.vercel.app">VIEW Project</a>
+                  <a href="https://event-system-wine.vercel.app">
+                    VIEW Project
+                  </a>
                 </div>
               </div>
             </div>
