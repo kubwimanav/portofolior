@@ -29,12 +29,7 @@ function Footer() {
           <div>
             <h3>Follow Me</h3>
             <p>let be social</p>
-            {/* <div className="contactSocialMedia">
-                  <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-                </div> */}
+            
           </div>
         </div>
 

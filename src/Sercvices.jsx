@@ -15,6 +15,8 @@ import { FaFacebookF } from "react-icons/fa";
 import "./App.css";
 import ModelSearch from "./ModelSearch";
 import { useForm } from "react-hook-form";
+import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 function Services() {
   const [openModel, setOpenModel] = useState(false);
 
@@ -642,9 +644,9 @@ function Services() {
                   <a href="#">
                     <FaFacebookF className="fot-icon" />
                   </a>
-                  <a href="#">
-                    <FaSquareInstagram className="fot-icon" />
-                  </a>
+                  <Link to={"https://github.com/kubwimanav"}>
+                    <BsGithub className="fot-icon" />
+                  </Link>
                   <a href="#">
                     <FaLinkedin className="fot-icon" />
                   </a>

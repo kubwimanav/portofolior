@@ -72,7 +72,7 @@ function About() {
               </div>
 
               <div className="box">
-                <h4>2021 - until now</h4>
+                <h4>2021 - 2025</h4>
                 <h3>information systems</h3>
                 <p>
                   systems play crucial role in modern businesses and
