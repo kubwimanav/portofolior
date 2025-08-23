@@ -20,25 +20,13 @@ function ModelSearch({ handlemadal }) {
               About
             </a>
           </li>
-          <li>
-            <a href="#services" onClick={handlemadal} className="model-linkss">
-              Services
-            </a>
-          </li>
+         
           <li>
             <a href="#portfolio" onClick={handlemadal} className="model-linkss">
               Portfolio
             </a>
           </li>
-          <li>
-            <a
-              href="#testimonials"
-              onClick={handlemadal}
-              className="model-linkss"
-            >
-              blog
-            </a>
-          </li>
+          
 
           <li>
             <a
