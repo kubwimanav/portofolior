@@ -710,18 +710,21 @@ color: #e3e3e8;
 
 .input{
 	width: 34rem;
-	border-radius: 3px;
+	border-radius: 6px;
 	font-size: 12px;
 	padding: 14px ;
 	background-color: var(--bg-clr-one);
 	color: var(--primary-clr);
 	border: none;
-	border-bottom: 1px solid var(--text-clr);
 	outline: none;
 }
 .contact-text{
 	height: 7rem;
-	border-radius: 3px;
+	font-size: 12px;
+	padding: 14px ;
+	border-radius: 6px;
+	color: var(--primary-clr);
+	background-color: var(--bg-clr-one);
 }
 .contact-map{
 	width: 30rem;
