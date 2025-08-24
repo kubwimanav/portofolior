@@ -30,6 +30,7 @@ button.btn{
 	letter-spacing: 1px;
 	cursor: pointer;
 	transition: 0.4s;
+
 }
 button.btn:hover{
 	background-color: var(--bg-clr-one);
@@ -237,45 +238,7 @@ button.contact-btn{
 .contact-one{
 	display: flex;
 }
-/* .home .career-container{
-	position: relative;
-	width: 100%;
-	height: auto;
-	margin-top: -100px;
-	left: 0;
-	padding: 0px 8% 10px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 15px 2%;
-}
-.career-container .career-item{
-	background-color: var(--bg-clr-one);
-	height: 70px;
-	display: flex;
-	align-items: center;
-	padding: 10px 15px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.15);
-}
-.career-container .career-item .icon{
-	display: inline-block;
-	background-color: var(--primary-clr);
-	min-width: 50px;
-	width: 50px;
-	height: 50px;
-	margin-right: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-}
-.career-container .career-item .icon i{
-	font-size: 22px;
-	color: var(--bg-clr-one);
-}
-.career-container .career-item .career-desc{
-	display: inline-block;
-} */
+
 .career-item .career-desc h2{
 	font-size: 20px;
 	line-height: 1.4;
@@ -771,17 +734,13 @@ color: #e3e3e8;
 
  .contactSocialMedia{
 	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: 20px 0px 0px;
+	gap: 20px;
 } 
 .contactSocialMedia a{
 	width: 30px;
 	height: 30px;
 	text-decoration: none;
 	text-align: center;
-	margin-left: 15px;
 	 border: 1px solid transparent;
 	border-radius: 5px;
 	align-items: center; 
@@ -792,7 +751,6 @@ color: #e3e3e8;
 .contactSocialMedia a i{
 	color: var(--bg-clr-one);
 	font-size: 18px;
-	line-height: 30px;
 	transition: 0.4s;
 }
  .contactSocialMedia a:hover{
@@ -843,19 +801,22 @@ color: #e3e3e8;
 /*   *** Footer Section Styling Starts ***   */
 .page-footer{
 	width: 100%;
-	padding: 20px 8%;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	margin-top: 20px;
-	background-color: #0f101d;
+	box-shadow: 5px 2px 5px 2px rgba(0,0,0,0.15);
+    background-color: var(--bg-clr-one);
 }
 /* .page-footer .footer-contents{
 	display: flex;
 	justify-content: space-between;
 	text-align-last: center;
 } */
+
 .vinct{
 	display: flex;
 	justify-content: space-between;
-	text-align-last: center;
+	padding: 0px 70px 0px 70px;
 	
    
 }
@@ -880,21 +841,31 @@ color: #e3e3e8;
 	color: #05555c;
 	line-height: 0;
 	padding: 19px 0px 13px 0px;
-
 	border: none;
 	background-color: white;
 }
 
-.vinct p{
-margin-top: 10px;
+.vinct-p{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 
+}
+.footer-contents{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }
 .footer-contents h3,ul{
-	color: white;
+	color: #186f78;
 
 }
+.link-icon{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
 .fot-icon{
-	margin-top: 3px;
 	color: white;
 }
 .fot-icon:hover{
@@ -908,19 +879,24 @@ margin-top: 10px;
 .footer-contents a{
 	text-decoration: none;
 	font-size: 22px;
-	font-weight: 700;
 	/* color:#ddd; */
-	margin-right: 20px;
 }
 .footer-contents p{
 	font-size: 16px;
-	color: #8e898993;
+	color: var(--text-clr);
 	/* color: var(--text-clr); */
+}
+.footer-contents center{
+	border-top: 1px solid #aaa;
+    padding-top: 20px;
+
 }
 .footer-contents p span{
 	color: var(--primary-clr);
 	font-weight: bold;
 }
+
+
 .contact-inputform{
 	display: grid;
 	gap: 4px;
@@ -1144,7 +1120,13 @@ margin-top: 10px;
 }
 
 @media (max-width:420px) {
+.vinct{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 	
+   
+}	
 .input{
 	width: 18rem;
 	

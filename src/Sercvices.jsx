@@ -594,49 +594,65 @@ function Services() {
         <div className="page-footer">
           <div className="footer-contents">
             <div className="vinct">
-              <div>
+              <div className="vinct-p">
                 <h3>About Me</h3>
-                <p>
-                  We have tested a number of registry <br />
-                  fix and clean utilities and present our top
-                  <br />3 list on our site for your convenience.
+                <p style={{fontSize:'14px'}}>
+                  Passionate frontend developer with experience in building{" "}
+                  <br />
+                  modern, user-friendly web applications using React, Next.js,
+                  and <br />
+                  TypeScript. Always learning, creating, and improving to
+                  deliver impactful <br /> digital solutions.
                 </p>
               </div>
-              <div>
-                <h3>Newsletters</h3>
-                <p>stay updated with my latest trend</p>
-                <div style={{ marginTop: "20px" }}>
-                  <input
-                    type="email"
-                    name="Email"
-                    placeholder="Enter your email"
-                    className="footer-email"
-                    {...register("email", {
-                      required: {
-                        value: true,
-                      },
-                    })}
-                  />
-                  {errors.email && (
-                    <span className="errorstext">
-                      Enter Email before Subscribe
-                    </span>
-                  )}
-                  <button
-                    className="footer-buttond"
-                    onClick={handleSubmit((data) =>
-                      console.log("Newsletter:", data)
-                    )}
-                  >
-                    Subscribe
-                  </button>
-                </div>
+              <div className="vinct-p">
+                <h3>Quik Links</h3>
+                <ul style={{ padding: "0px", margin: "0px" }}>
+                  <li>
+                    <a
+                      href="#home"
+                      style={{
+                        fontSize: "14px",
+                        fontStyle: "normal",
+                        fontWeight: "normal",
+                        color: "#464b4b",
+                      }}
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#about"
+                      style={{
+                        fontSize: "14px",
+                        fontStyle: "normal",
+                        fontWeight: "normal",
+                        color: "#464b4b",
+                      }}
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#portfolio"
+                      style={{
+                        fontSize: "14px",
+                        fontStyle: "normal",
+                        fontWeight: "normal",
+                        color: "#464b4b",
+                      }}
+                    >
+                      Portfolio
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div>
+              <div className="vinct-p">
                 <h3>Follow Me</h3>
-                <p>let be social</p>
                 <div className="contactSocialMedia">
-                  <a href="#" aria-label="WhatsApp">
+                  <a href="#" aria-label="WhatsApp" className="link-icon">
                     <FaWhatsappSquare className="fot-icon" />
                   </a>
                   <a href="#" aria-label="Facebook">
@@ -647,10 +663,11 @@ function Services() {
                     aria-label="GitHub"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="link-icon"
                   >
                     <BsGithub className="fot-icon" />
                   </a>
-                  <a href="#" aria-label="LinkedIn">
+                  <a href="#" aria-label="LinkedIn" className="link-icon">
                     <FaLinkedin className="fot-icon" />
                   </a>
                 </div>
@@ -658,7 +675,7 @@ function Services() {
             </div>
 
             <center>
-              <p style={{ paddingTop: "2rem" }}>© 2024 Vincent T.</p>
+              <p>© {new Date().getFullYear()} Vincent Turikubwimana.</p>
             </center>
           </div>
         </div>
