@@ -495,8 +495,8 @@ function Services() {
               <div className="item code">
                 <img src={website3} alt="Website Project 3" />
                 <div className="overlay">
-                  <a href="https://event-system-wine.vercel.app">
-                    VIEW Project
+                  <a href="https://product-typescript-sea3.vercel.app">
+                    VIEW Typescript Project
                   </a>
                 </div>
               </div>
@@ -596,7 +596,7 @@ function Services() {
             <div className="vinct">
               <div className="vinct-p">
                 <h3>About Me</h3>
-                <p style={{fontSize:'14px'}}>
+                <p style={{ fontSize: "14px" }}>
                   Passionate frontend developer with experience in building{" "}
                   <br />
                   modern, user-friendly web applications using React, Next.js,
