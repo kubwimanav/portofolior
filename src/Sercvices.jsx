@@ -12,7 +12,16 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
-import { MessageCircle, X, Send, Bot } from "lucide-react";
+import {
+  MessageCircle,
+  X,
+  Send,
+  Bot,
+  Calendar,
+  Mail,
+  Clock,
+  User,
+} from "lucide-react";
 import "./App.css";
 import ModelSearch from "./ModelSearch";
 import { useForm } from "react-hook-form";
@@ -21,12 +30,12 @@ import { BsGithub } from "react-icons/bs";
 function Services() {
   const [openModel, setOpenModel] = useState(false);
 
-  // Advanced AI Assistant states
+  // Professional AI Secretary states
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "🚀 Welcome! I'm Vincent's Advanced AI Assistant. I can help you with:\n\n• Detailed project analysis\n• Skill assessments\n• Career timeline\n• Technology recommendations\n• Code examples\n• Hiring consultation\n\nWhat would you like to explore?",
+      text: "Hello! I'm Vincent's Portfolio Secretary. I can help you with:\n\n• Questions about Vincent's background, projects & services\n• Taking messages and scheduling appointments\n• Providing project information and availability\n• Connecting you with Vincent for business inquiries\n\nHow may I assist you today?",
       isBot: true,
       timestamp: new Date(),
       type: "welcome",
@@ -34,6 +43,7 @@ function Services() {
   ]);
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [currentMode, setCurrentMode] = useState("chat");
 
   const handlemadal = () => {
     setOpenModel(!openModel);
@@ -41,7 +51,6 @@ function Services() {
 
   const onsubmit = (data) => {
     console.log("Form submitted:", data);
-    // Handle form submission here
   };
 
   const {
@@ -50,124 +59,164 @@ function Services() {
     formState: { errors },
   } = useForm();
 
-  // Advanced AI Assistant functions
   const toggleChat = () => {
     setIsChatOpen(!isChatOpen);
   };
 
-  const getAdvancedAIResponse = (userMessage) => {
+  // Professional Secretary Response System
+  const getSecretaryResponse = (userMessage) => {
     const message = userMessage.toLowerCase();
 
-    // Advanced AI responses with detailed information
+    // Message taking functionality
     if (
-      message.includes("skill") ||
-      message.includes("technology") ||
-      message.includes("tech stack")
+      message.includes("leave a message") ||
+      message.includes("send message") ||
+      message.includes("tell vincent") ||
+      message.includes("contact vincent")
     ) {
       return {
-        text: "🛠️ **Vincent's Technical Expertise:**\n\n**Frontend Development:**\n• React.js (Advanced) - Component architecture, Hooks, Context API\n• JavaScript ES6+ - Modern syntax, async/await, destructuring\n• HTML5/CSS3 - Semantic markup, Flexbox, Grid, animations\n• UI/UX Design - User-centered design, wireframing, prototyping\n\n**Tools & Frameworks:**\n• Version Control: Git/GitHub\n• Development: VS Code, browser DevTools\n• Design: Figma, Adobe Creative Suite\n\n**Current Learning:** Full-stack development, backend integration\n\nWould you like specific examples of how he's used these technologies?",
-        type: "technical",
+        text: "I'd be happy to take a message for Vincent. Please provide:\n\n• Your name and email\n• Your message\n• Priority level (if urgent)\n• Best time for Vincent to respond\n\nVincent checks messages daily and responds within 24 hours for urgent matters.",
+        type: "message_taking",
         suggestedQuestions: [
-          "Show me project examples",
-          "What makes Vincent different?",
-          "Can you show code samples?",
+          "Schedule appointment instead",
+          "Mark as urgent",
+          "Request specific callback time",
         ],
       };
-    } else if (
+    }
+
+    // Appointment scheduling
+    if (
+      message.includes("schedule") ||
+      message.includes("appointment") ||
+      message.includes("meeting") ||
+      message.includes("book")
+    ) {
+      return {
+        text: "I can schedule an appointment with Vincent.\n\n**Business Hours:** Mon-Fri, 9:00 AM - 6:00 PM (Kigali time)\n**Duration Options:** 15, 30, or 60 minutes\n**Meeting Types:** Google Meet, Zoom, Phone, or In-person\n\nTo schedule, please provide:\n• Preferred date and time\n• Meeting duration\n• Meeting type\n• Your contact details\n• Brief purpose of meeting\n\nI'll check Vincent's availability and confirm your appointment.",
+        type: "appointment",
+        suggestedQuestions: [
+          "Check this week availability",
+          "Schedule project consultation",
+          "Book phone meeting",
+        ],
+      };
+    }
+
+    // Portfolio and projects information
+    if (
       message.includes("project") ||
       message.includes("portfolio") ||
       message.includes("work")
     ) {
       return {
-        text: "🚀 **Vincent's Featured Projects:**\n\n**1. Boostify YouTube** (Team Project - kLab Rwanda)\n• YouTube analytics dashboard\n• React.js frontend with modern UI\n• Team collaboration experience\n🔗 [View Live Demo](https://boostify-tube-network-frontend.vercel.app)\n\n**2. Feli Express Dashboard** (FeliTechnology)\n• Car rental management system\n• Real-time transaction tracking\n• 5 months development experience\n🔗 [View Dashboard](https://dashboard-ruby-iota-75.vercel.app/)\n\n**3. Event Management System** (Afritec)\n• Full-stack web application\n• Event planning and management\n• Modern responsive design\n🔗 [Explore System](https://event-system-wine.vercel.app)\n\n**Personal Projects:**\n• Holiday Planning App\n• Personal To-Do Application\n\nWhich project interests you most?",
+        text: "Vincent's Portfolio Overview:\n\n**Recent Projects:**\n• Harmony Spa Website - Responsive site with booking system\n• Wouessi Website - ReactJS development & SEO optimization\n• Herve Designs - Personal business showcase site\n• Event Management System (Afritec 2025)\n• Feli Express Dashboard (FeliTechnology)\n• Boostify YouTube (kLab team project)\n\n**Services Available:**\n• Website development (React + frontend)\n• SEO optimization\n• Microsoft 365 support\n• Digital outreach campaigns\n• Tender coordination\n\nWould you like details about any specific project or service?",
         type: "portfolio",
         suggestedQuestions: [
-          "Tell me about the team project",
-          "What challenges did you solve?",
-          "Show me the code structure",
+          "Request project quote",
+          "Schedule project discussion",
+          "View live demos",
         ],
       };
-    } else if (
-      message.includes("experience") ||
-      message.includes("career") ||
-      message.includes("journey")
+    }
+
+    // Skills and technology
+    if (
+      message.includes("skill") ||
+      message.includes("technology") ||
+      message.includes("tech") ||
+      message.includes("experience")
     ) {
       return {
-        text: "📈 **Vincent's Professional Journey:**\n\n**2025 - Present: Web Developer at Afritec**\n• Full-stack development focus\n• Event Management System implementation\n• Client collaboration and project delivery\n\n**2024: Frontend Developer at FeliTechnology**\n• 5 months intensive development\n• Built Feli Express dashboard from scratch\n• Managed company transaction systems\n\n**2023-2024: Frontend Developer & UI/UX Designer at kLab Rwanda**\n• 4-month intensive training program\n• Team project: Boostify YouTube\n• Learned modern development practices\n\n**2022-2023: Data Analyst at Co-Harvester Ministry**\n• Business intelligence and data processing\n• Informed decision-making support\n\n**Education:** Currently studying Information Systems at University of Rwanda (2021-present)\n\nVincent shows consistent growth and hands-on experience. What specific aspect interests you?",
-        type: "career",
+        text: "Vincent's Technical Profile:\n\n**Core Skills:**\n• HTML, CSS, JavaScript\n• ReactJS (advanced level)\n• SEO (on-page optimization)\n• Figma (UI/UX basics)\n• Microsoft 365 (Outlook/SharePoint/Teams)\n• Digital Record Management\n\n**Soft Skills:**\n• Communication & Problem-solving\n• Strategic thinking\n• Client outreach\n• Process improvement\n• Team collaboration\n\n**Education:** Bachelor in Business Information Technology, University of Rwanda\n\n**Current Status:** Available for new projects",
+        type: "skills",
         suggestedQuestions: [
-          "What makes Vincent hireable?",
-          "Tell me about his growth",
-          "What are his future goals?",
+          "Schedule technical interview",
+          "Discuss project requirements",
+          "Check availability for hire",
         ],
       };
-    } else if (
-      message.includes("hire") ||
+    }
+
+    // Contact and availability
+    if (
       message.includes("contact") ||
-      message.includes("available")
+      message.includes("available") ||
+      message.includes("reach") ||
+      message.includes("hire")
     ) {
       return {
-        text: "💼 **Ready to Work with Vincent?**\n\n**Why Choose Vincent:**\n✅ Proven track record with real companies\n✅ Modern tech stack expertise\n✅ Team collaboration experience\n✅ Currently available for projects\n✅ Competitive rates for quality work\n\n**Contact Information:**\n📧 Email: vkubwimana@gmail.com\n📱 Use the contact form on this page\n💻 GitHub: Check out his code repositories\n\n**Project Types:**\n• Frontend web applications\n• UI/UX design and prototyping\n• Dashboard and admin panels\n• Responsive website development\n• React.js applications\n\n**Response Time:** Usually within 24 hours\n\nReady to start your project? Use the contact form above or reach out directly!",
-        type: "hiring",
+        text: "Contact Information:\n\n**Email:** vkubwimana@gmail.com\n**Location:** Kigali, Rwanda\n**Availability:** Currently available for new projects\n**Response Time:** Within 24 hours\n\n**Best Contact Methods:**\n1. Through this secretary system (immediate)\n2. Email for formal inquiries\n3. Scheduled consultations\n\nI can schedule a consultation or take a detailed message for Vincent. What would you prefer?",
+        type: "contact",
         suggestedQuestions: [
-          "What are his rates?",
-          "How does he work with clients?",
-          "Can I see references?",
+          "Schedule consultation",
+          "Leave detailed message",
+          "Request project quote",
         ],
       };
-    } else if (
-      message.includes("education") ||
-      message.includes("learning") ||
-      message.includes("study")
+    }
+
+    // About Vincent
+    if (
+      message.includes("about") ||
+      message.includes("who is") ||
+      message.includes("background")
     ) {
       return {
-        text: "🎓 **Vincent's Educational Background:**\n\n**Current: University of Rwanda (2021-Present)**\n• Bachelor's in Information Systems\n• Focus on software development and system design\n• Combining theory with practical application\n\n**Professional Training:**\n• **kLab Rwanda Frontend Program** (2023-2024)\n  - 4-month intensive bootcamp\n  - React.js, JavaScript, UI/UX Design\n  - Team project development\n  - Industry best practices\n\n• **Data Analysis Certification** (2022-2023)\n  - Business intelligence tools\n  - Data processing and visualization\n  - Decision support systems\n\n**Foundation:**\n• **High School Diploma** - E.S.Rukozo (2014-2019)\n  - Mathematics, Computer Science, Economics\n  - Entrepreneurship foundation\n\n**Continuous Learning:** Vincent actively stays updated with latest web technologies and development practices.\n\nWhat aspects of his educational journey interest you most?",
-        type: "education",
+        text: "About Vincent Turikubwimana:\n\n**Profile:** Early-career professional with experience in:\n• Software development (ReactJS)\n• Tender coordination\n• Business development support\n• Microsoft 365 IT support\n\n**Current Role:** Web Developer\n**Location:** Kigali, Rwanda\n**Education:** Business Information Technology student\n\n**Professional Focus:** Creating modern web solutions and helping businesses optimize their digital tools.\n\nWould you like more specific information about his experience or current projects?",
+        type: "about",
         suggestedQuestions: [
-          "How does he stay current?",
-          "What certifications does he have?",
-          "Tell me about kLab Rwanda",
+          "View detailed CV",
+          "Schedule introduction call",
+          "Ask about specific experience",
         ],
       };
-    } else if (
+    }
+
+    // Services information
+    if (
+      message.includes("service") ||
+      message.includes("what can") ||
+      message.includes("help")
+    ) {
+      return {
+        text: "Vincent's Services:\n\n**Web Development:**\n• ReactJS applications\n• Responsive website design\n• Frontend optimization\n\n**Digital Services:**\n• SEO optimization\n• Microsoft 365 support\n• Digital outreach campaigns\n• Process improvement consulting\n\n**Business Support:**\n• Tender coordination assistance\n• Digital record management\n• Client communication systems\n\n**Consultation Available:** Free 30-minute initial consultation to discuss your needs.\n\nWhich service interests you most?",
+        type: "services",
+        suggestedQuestions: [
+          "Get service quote",
+          "Schedule consultation",
+          "Discuss project timeline",
+        ],
+      };
+    }
+
+    // Greeting responses
+    if (
       message.includes("hello") ||
       message.includes("hi") ||
       message.includes("hey")
     ) {
-      const greetings = [
-        "Hello! 👋 Great to meet you! I'm Vincent's advanced AI assistant.",
-        "Hi there! 🚀 Welcome to Vincent's portfolio. How can I help you today?",
-        "Hey! 😊 I'm here to help you learn everything about Vincent's skills and experience.",
-      ];
       return {
-        text:
-          greetings[Math.floor(Math.random() * greetings.length)] +
-          "\n\n**I can help you with:**\n• Technical skills and expertise\n• Project details and live demos\n• Career progression and experience\n• Hiring information and availability\n• Code examples and development approach\n\nWhat interests you most?",
+        text: "Hello! Welcome to Vincent's professional portfolio. I'm his AI Secretary, here to assist with all inquiries.\n\n**I can help you with:**\n• Learning about Vincent's skills and experience\n• Scheduling meetings and consultations\n• Taking messages for Vincent\n• Providing project information\n• Connecting you for business opportunities\n\nWhat would you like to know about Vincent's services?",
         type: "greeting",
         suggestedQuestions: [
-          "Tell me about his best projects",
-          "Is he available for hire?",
-          "What makes him special?",
-        ],
-      };
-    } else {
-      const responses = [
-        "I'm Vincent's comprehensive AI assistant! I can provide detailed information about his technical skills, project portfolio, professional experience, and availability for hire.",
-        "Let me help you discover Vincent's expertise! I can discuss his React.js projects, UI/UX design work, development approach, or hiring process.",
-        "Welcome! I have extensive knowledge about Vincent's background, from his University studies to professional projects at FeliTechnology and Afritec.",
-      ];
-      return {
-        text:
-          responses[Math.floor(Math.random() * responses.length)] +
-          "\n\n**Popular Topics:**\n• Project portfolio and live demos\n• Technical skills and code examples\n• Professional experience and growth\n• Hiring process and availability\n• Educational background and certifications\n\nWhat would you like to explore first?",
-        type: "general",
-        suggestedQuestions: [
-          "Show me his best work",
-          "What technologies does he use?",
-          "Is he available for projects?",
+          "Tell me about Vincent",
+          "Schedule a meeting",
+          "View his projects",
         ],
       };
     }
+
+    // Default professional response
+    return {
+      text: "I'm Vincent's professional secretary, here to help with your inquiry.\n\n**Available Services:**\n• Portfolio information and project details\n• Appointment scheduling\n• Message taking for Vincent\n• Business inquiry support\n• Service consultation\n\nPlease let me know how I can assist you today, or feel free to ask about Vincent's background, projects, or availability.",
+      type: "general",
+      suggestedQuestions: [
+        "Learn about Vincent's background",
+        "Schedule appointment",
+        "Leave a message",
+      ],
+    };
   };
 
   const sendMessage = async (e) => {
@@ -185,21 +234,21 @@ function Services() {
     setInputMessage("");
     setIsTyping(true);
 
-    // Simulate advanced AI processing time
+    // Simulate processing
     setTimeout(() => {
-      const aiResponse = getAdvancedAIResponse(inputMessage);
+      const secretaryResponse = getSecretaryResponse(inputMessage);
       const botMessage = {
         id: messages.length + 2,
-        text: aiResponse.text,
+        text: secretaryResponse.text,
         isBot: true,
         timestamp: new Date(),
-        type: aiResponse.type || "general",
-        suggestedQuestions: aiResponse.suggestedQuestions || [],
+        type: secretaryResponse.type || "general",
+        suggestedQuestions: secretaryResponse.suggestedQuestions || [],
       };
 
       setMessages((prev) => [...prev, botMessage]);
       setIsTyping(false);
-    }, 2000);
+    }, 1500);
   };
 
   const handleSuggestedQuestion = (question) => {
@@ -438,13 +487,13 @@ function Services() {
                 All
               </button>
               <button className="button" data-filter=".design">
-                Design
+                React JS
               </button>
               <button className="button" data-filter=".code">
-                Development
+                Typescript
               </button>
               <button className="button" data-filter=".logo">
-                Logo
+                Design
               </button>
             </div>
 
@@ -606,7 +655,7 @@ function Services() {
                 </p>
               </div>
               <div className="vinct-p">
-                <h3>Quik Links</h3>
+                <h3>Quick Links</h3>
                 <ul style={{ padding: "0px", margin: "0px" }}>
                   <li>
                     <a
@@ -675,12 +724,15 @@ function Services() {
             </div>
 
             <center>
-              <p>© {new Date().getFullYear()} Vincent Turikubwimana.</p>
+              <p>
+                © {new Date().getFullYear()} Vincent Turikubwimana. All rights
+                reserved.
+              </p>
             </center>
           </div>
         </div>
 
-        {/* Advanced AI Assistant Chat Widget */}
+        {/* Professional AI Secretary Chat Widget */}
         <div
           className="ai-chat-widget"
           style={{
@@ -721,48 +773,29 @@ function Services() {
                 <Bot size={window.innerWidth <= 768 ? 24 : 28} />
               )}
 
-              {/* Pulse animation ring */}
+              {/* Notification indicator */}
               {!isChatOpen && (
                 <div
-                  className="ai-chat-pulse-ring"
+                  className="ai-chat-badge"
                   style={{
                     position: "absolute",
-                    top: "-5px",
-                    left: "-5px",
-                    right: "-5px",
-                    bottom: "-5px",
+                    top: "clamp(0px, 1vw, 5px)",
+                    right: "clamp(0px, 1vw, 5px)",
+                    width: "clamp(16px, 4vw, 18px)",
+                    height: "clamp(16px, 4vw, 18px)",
+                    backgroundColor: "#2ecc71",
                     borderRadius: "50%",
-                    border: "2px solid rgba(5, 85, 92, 0.3)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "clamp(8px, 2vw, 9px)",
+                    color: "white",
+                    fontWeight: "bold",
                     animation: "aiChatPulse 2s infinite",
                   }}
                 />
               )}
             </button>
-
-            {/* Notification badge */}
-            {!isChatOpen && (
-              <div
-                className="ai-chat-badge"
-                style={{
-                  position: "absolute",
-                  top: "clamp(0px, 1vw, 5px)",
-                  right: "clamp(0px, 1vw, 5px)",
-                  width: "clamp(18px, 4vw, 20px)",
-                  height: "clamp(18px, 4vw, 20px)",
-                  backgroundColor: "#ff4757",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "clamp(9px, 2vw, 10px)",
-                  color: "white",
-                  fontWeight: "bold",
-                  animation: "aiChatBounce 1s infinite",
-                }}
-              >
-                AI
-              </div>
-            )}
           </div>
 
           {/* Chat Window */}
@@ -773,19 +806,18 @@ function Services() {
                 position: "absolute",
                 bottom: "clamp(60px, 12vw, 70px)",
                 right: "0",
-                width: "clamp(280px, 90vw, 420px)",
+                width: "clamp(280px, 90vw, 400px)",
                 height: "clamp(400px, 70vh, 500px)",
                 maxWidth: "95vw",
                 maxHeight: "80vh",
-                background:
-                  "linear-gradient(135deg, var(--primary-clr) 0%, var(--links-clr) 100%)",
+                background: "var(--bg-clr-one)",
                 borderRadius: "clamp(15px, 3vw, 20px)",
                 boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)",
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
                 animation: "aiChatSlideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                border: "2px solid var(--primary-clr)",
               }}
             >
               {/* Chat Header */}
@@ -793,8 +825,7 @@ function Services() {
                 className="ai-chat-header"
                 style={{
                   background:
-                    "linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%)",
-                  backdropFilter: "blur(10px)",
+                    "linear-gradient(135deg, var(--primary-clr) 0%, var(--links-clr) 100%)",
                   color: "var(--bg-clr-one)",
                   padding: "clamp(12px, 3vw, 15px)",
                   display: "flex",
@@ -807,16 +838,15 @@ function Services() {
                   style={{
                     width: "clamp(32px, 6vw, 40px)",
                     height: "clamp(32px, 6vw, 40px)",
-                    background:
-                      "linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%)",
+                    background: "rgba(255,255,255,0.2)",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "2px solid rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
                   }}
                 >
-                  <Bot size={window.innerWidth <= 768 ? 18 : 24} />
+                  <User size={window.innerWidth <= 768 ? 16 : 20} />
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <h3
@@ -824,13 +854,10 @@ function Services() {
                       margin: "0",
                       fontSize: "clamp(13px, 3vw, 14px)",
                       fontWeight: "600",
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
                       color: "var(--bg-clr-one)",
                     }}
                   >
-                    Vincent's AI Assistant
+                    Portfolio Secretary
                   </h3>
                   <div
                     style={{
@@ -846,44 +873,19 @@ function Services() {
                         height: "6px",
                         backgroundColor: "#2ecc71",
                         borderRadius: "50%",
-                        animation: "aiChatPulse 1.5s infinite",
                       }}
                     />
                     <span
                       style={{
                         fontSize: "clamp(11px, 2.5vw, 12px)",
                         opacity: 0.9,
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
                         color: "var(--bg-clr-one)",
                       }}
                     >
-                      {window.innerWidth <= 480
-                        ? "AI Online"
-                        : "Advanced AI • Online"}
+                      Available to assist
                     </span>
                   </div>
                 </div>
-                {/* Close button for mobile */}
-                {window.innerWidth <= 480 && (
-                  <button
-                    onClick={toggleChat}
-                    style={{
-                      background: "transparent",
-                      border: "none",
-                      color: "var(--bg-clr-one)",
-                      cursor: "pointer",
-                      padding: "4px",
-                      borderRadius: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <X size={20} />
-                  </button>
-                )}
               </div>
 
               {/* Messages Area */}
@@ -893,7 +895,7 @@ function Services() {
                   flex: 1,
                   padding: "clamp(8px, 2vw, 12px)",
                   overflowY: "auto",
-                  background: "var(--bg-clr-one)",
+                  background: "#f8f9fa",
                   scrollBehavior: "smooth",
                   WebkitOverflowScrolling: "touch",
                 }}
@@ -918,7 +920,7 @@ function Services() {
                             ? "15px 15px 15px 4px"
                             : "15px 15px 4px 15px",
                           background: message.isBot
-                            ? "var(--primary-light-clr)"
+                            ? "white"
                             : "linear-gradient(135deg, var(--primary-clr) 0%, var(--links-clr) 100%)",
                           color: message.isBot
                             ? "var(--text-clr)"
@@ -928,11 +930,9 @@ function Services() {
                           whiteSpace: "pre-wrap",
                           wordWrap: "break-word",
                           boxShadow: message.isBot
-                            ? "0 3px 10px rgba(0,0,0,0.1)"
+                            ? "0 2px 8px rgba(0,0,0,0.1)"
                             : "0 3px 10px rgba(5, 85, 92, 0.3)",
-                          border: message.isBot
-                            ? "1px solid var(--bg-clr-three)"
-                            : "none",
+                          border: message.isBot ? "1px solid #e1e5e9" : "none",
                         }}
                       >
                         {message.text}
@@ -996,13 +996,14 @@ function Services() {
                         padding:
                           "clamp(12px, 3vw, 16px) clamp(14px, 4vw, 20px)",
                         borderRadius: "15px 15px 15px 4px",
-                        background: "var(--primary-light-clr)",
+                        background: "white",
                         color: "var(--text-clr)",
                         fontSize: "clamp(13px, 3vw, 14px)",
                         display: "flex",
                         alignItems: "center",
                         gap: "8px",
-                        boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                        border: "1px solid #e1e5e9",
                       }}
                     >
                       <div style={{ display: "flex", gap: "3px" }}>
@@ -1010,7 +1011,7 @@ function Services() {
                           style={{
                             width: "6px",
                             height: "6px",
-                            backgroundColor: "var(--text-clr)",
+                            backgroundColor: "var(--primary-clr)",
                             borderRadius: "50%",
                             animation:
                               "aiChatBounce 1.4s ease-in-out infinite both",
@@ -1020,7 +1021,7 @@ function Services() {
                           style={{
                             width: "6px",
                             height: "6px",
-                            backgroundColor: "var(--text-clr)",
+                            backgroundColor: "var(--primary-clr)",
                             borderRadius: "50%",
                             animation:
                               "aiChatBounce 1.4s ease-in-out 0.16s infinite both",
@@ -1030,18 +1031,14 @@ function Services() {
                           style={{
                             width: "6px",
                             height: "6px",
-                            backgroundColor: "var(--text-clr)",
+                            backgroundColor: "var(--primary-clr)",
                             borderRadius: "50%",
                             animation:
                               "aiChatBounce 1.4s ease-in-out 0.32s infinite both",
                           }}
                         />
                       </div>
-                      <span>
-                        {window.innerWidth <= 480
-                          ? "AI analyzing..."
-                          : "Advanced AI is analyzing..."}
-                      </span>
+                      <span>Secretary analyzing...</span>
                     </div>
                   </div>
                 )}
@@ -1052,8 +1049,8 @@ function Services() {
                 className="ai-chat-input-area"
                 style={{
                   padding: "clamp(12px, 3vw, 20px)",
-                  background: "var(--bg-clr-one)",
-                  borderTop: "1px solid var(--bg-clr-three)",
+                  background: "white",
+                  borderTop: "1px solid #e1e5e9",
                   display: "flex",
                   gap: "clamp(8px, 2vw, 12px)",
                   alignItems: "flex-end",
@@ -1066,24 +1063,21 @@ function Services() {
                     placeholder={
                       window.innerWidth <= 480
                         ? "Ask about Vincent..."
-                        : window.innerWidth <= 768
-                        ? "Ask me about Vincent's skills..."
-                        : "Ask me anything about Vincent's skills, projects, or availability..."
+                        : "Ask about Vincent's background, schedule a meeting, or leave a message..."
                     }
                     className="ai-chat-input"
                     style={{
                       width: "100%",
                       padding: "clamp(10px, 3vw, 12px) clamp(12px, 3vw, 16px)",
-                      border: "2px solid transparent",
+                      border: "2px solid #e1e5e9",
                       borderRadius: "clamp(20px, 5vw, 25px)",
                       fontSize: "clamp(13px, 3vw, 14px)",
                       outline: "none",
                       resize: "none",
                       minHeight: "clamp(36px, 8vw, 44px)",
                       maxHeight: "clamp(80px, 20vw, 120px)",
-                      background: "white",
+                      background: "#f8f9fa",
                       color: "var(--text-clr)",
-                      boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
                       transition: "all 0.3s ease",
                       fontFamily: "'Roboto', sans-serif",
                       WebkitAppearance: "none",
@@ -1108,7 +1102,7 @@ function Services() {
                     background:
                       inputMessage.trim() && !isTyping
                         ? "linear-gradient(135deg, var(--primary-clr) 0%, var(--links-clr) 100%)"
-                        : "var(--bg-clr-three)",
+                        : "#ccc",
                     border: "none",
                     color: "var(--bg-clr-one)",
                     cursor:
@@ -1122,8 +1116,7 @@ function Services() {
                     boxShadow:
                       inputMessage.trim() && !isTyping
                         ? "0 3px 10px rgba(5, 85, 92, 0.3)"
-                        : "0 2px 6px rgba(0,0,0,0.1)",
-                    transform: "scale(1)",
+                        : "none",
                     flexShrink: 0,
                   }}
                 >
@@ -1153,8 +1146,8 @@ function Services() {
               opacity: 1;
             }
             50% {
-              transform: scale(1.1);
-              opacity: 0.7;
+              transform: scale(1.05);
+              opacity: 0.8;
             }
             100% {
               transform: scale(1);
@@ -1173,7 +1166,7 @@ function Services() {
             }
           }
 
-          /* AI Chat Widget Hover Effects */
+          /* Professional hover effects */
           .ai-chat-toggle-btn:hover {
             transform: ${isChatOpen
               ? "rotate(180deg) scale(1.1)"
@@ -1184,51 +1177,44 @@ function Services() {
           .ai-chat-suggestion-btn:hover {
             background-color: var(--primary-clr);
             color: var(--bg-clr-one);
+            transform: translateY(-1px);
           }
 
-          .ai-chat-send-btn:hover {
+          .ai-chat-send-btn:hover:not(:disabled) {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(5, 85, 92, 0.4);
           }
 
           .ai-chat-input:focus {
             border-color: var(--primary-clr);
-            box-shadow: 0 4px 15px rgba(5, 85, 92, 0.2);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(5, 85, 92, 0.1);
           }
 
-          /* Custom scrollbar for AI chat */
+          /* Custom scrollbar */
           .ai-chat-messages::-webkit-scrollbar {
             width: 4px;
           }
 
           .ai-chat-messages::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.1);
+            background: #f1f3f4;
             border-radius: 3px;
           }
 
           .ai-chat-messages::-webkit-scrollbar-thumb {
-            background: linear-gradient(
-              135deg,
-              var(--primary-clr),
-              var(--links-clr)
-            );
+            background: var(--primary-clr);
             border-radius: 3px;
           }
 
           .ai-chat-messages::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(
-              135deg,
-              var(--links-clr),
-              var(--primary-clr)
-            );
+            background: var(--links-clr);
           }
 
-          /* Mobile touch improvements for AI chat */
+          /* Mobile responsiveness */
           @media (max-width: 768px) {
             .ai-chat-input,
-            .ai-chat-suggestion-btn,
-            .ai-chat-send-btn {
-              font-size: 16px !important; /* Prevent zoom on iOS */
+            .ai-chat-suggestion-btn {
+              font-size: 16px !important;
             }
 
             .ai-chat-toggle-btn,
@@ -1238,33 +1224,18 @@ function Services() {
               min-width: 44px;
             }
 
-            .ai-chat-suggestion-btn:active {
-              background-color: var(--primary-clr);
-              color: var(--bg-clr-one);
-            }
-
             .ai-chat-window {
-              /* Full screen on very small devices */
               position: fixed !important;
-              top: 20px !important;
-              right: 20px !important;
-              left: 20px !important;
-              bottom: 20px !important;
+              top: 10px !important;
+              right: 10px !important;
+              left: 10px !important;
+              bottom: 10px !important;
               width: auto !important;
               height: auto !important;
               border-radius: 15px !important;
             }
           }
 
-          /* Tablet adjustments for AI chat */
-          @media (min-width: 481px) and (max-width: 768px) {
-            .ai-chat-window {
-              width: 350px !important;
-              height: 450px !important;
-            }
-          }
-
-          /* Small mobile phones AI chat adjustments */
           @media (max-width: 320px) {
             .ai-chat-messages {
               padding: 6px !important;
@@ -1275,7 +1246,6 @@ function Services() {
             }
           }
 
-          /* Landscape mobile adjustments for AI chat */
           @media (max-height: 500px) and (orientation: landscape) {
             .ai-chat-window {
               height: 70vh !important;
@@ -1283,15 +1253,13 @@ function Services() {
             }
           }
 
-          /* Reduced motion for accessibility */
+          /* Accessibility */
           @media (prefers-reduced-motion: reduce) {
             .ai-chat-toggle-btn,
             .ai-chat-window,
-            .ai-chat-pulse-ring,
             .ai-chat-badge {
-              animation-duration: 0.01ms !important;
-              animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important;
+              animation: none !important;
+              transition: none !important;
             }
           }
         `}</style>

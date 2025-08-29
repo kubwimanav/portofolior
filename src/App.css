@@ -336,8 +336,8 @@ button.contact-btn{
 	letter-spacing: 1px;
 }
 .about-desc .download-btn{
-	border-radius: 25px;
-	margin-top: 25px;
+	border-radius: 9px;
+	margin-top: 50px;
 }
 .about-desc .download-btn a{
 text-decoration: none;
