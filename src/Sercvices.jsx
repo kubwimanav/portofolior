@@ -402,7 +402,7 @@ function Services() {
                 </div>
 
                 <div className="box">
-                  <h4>2021 - until now</h4>
+                  <h4>2021 - 2025</h4>
                   <h3>information systems</h3>
                   <p>
                     systems play crucial role in modern businesses and
@@ -422,25 +422,27 @@ function Services() {
               <div className="resume-contents">
                 <div className="box">
                   <h4>2023- 2024</h4>
-                  <h3>Front-End Web Developer</h3>
+                  <h3>Front-End Developer</h3>
                   <p>
                     I attended a 4-month training program at kLab Rwanda, where
                     i worked as a frontend developer. At the end of the
                     training, me and my team implemented a project called
-                    Boostify YouTube.
+                    Boostify YouTube.with(React js, tailwindcss) as frontend
                   </p>
                   <h5 className="vanue">Klab Rwanda</h5>
                 </div>
 
                 <div className="box">
-                  <h4>2023- 2024</h4>
-                  <h3>UI/UX Designer</h3>
+                  <h4>2025- 2025</h4>
+                  <h3>Front-End Developer</h3>
                   <p>
-                    The main goal as UI/UX designer is to enhance user
-                    satisfaction and meet the user's needs and goals while also
-                    achieving the objectives of project
+                    I attended a 3-month training program at Solvit Africa,
+                    where i worked as a frontend developer. At the end of the
+                    training, me and my team implemented a project called Smart
+                    Trace Device. with(React js,TypeScript, Redux, tailwindcss)
+                    as frontend{" "}
                   </p>
-                  <h5 className="vanue">Klab Rwanda</h5>
+                  <h5 className="vanue">Solvit Africa</h5>
                 </div>
 
                 <div className="box">
@@ -462,7 +464,8 @@ function Services() {
                     creating and maintaining websites and web applications. I
                     work on both the frontend and backend aspects of web
                     development. I implimented a project called Event Managment
-                    System.
+                    System. with(React js,css,pyton) as
+                    web developer
                   </p>
                   <h5 className="vanue">Afritec</h5>
                 </div>
@@ -515,9 +518,7 @@ function Services() {
               <div className="item code">
                 <img src={website1} alt="Website Project 1" />
                 <div className="overlay">
-                  <a href="https://boostify-tube-network-frontend.vercel.app">
-                    VIEW Project
-                  </a>
+                  <a href="https://we-mep.rw/">VIEW Project</a>
                 </div>
               </div>
             </div>
@@ -526,9 +527,7 @@ function Services() {
               <div className="item design">
                 <img src={website4} alt="Logo Project" />
                 <div className="overlay">
-                  <a href="https://vinc-klab-kubwimanav.vercel.app/">
-                    VIEW Project
-                  </a>
+                  <a href="https://cert-eng.com/">VIEW Project</a>
                 </div>
               </div>
 
@@ -1168,9 +1167,9 @@ function Services() {
 
           /* Professional hover effects */
           .ai-chat-toggle-btn:hover {
-            transform: ${isChatOpen
-              ? "rotate(180deg) scale(1.1)"
-              : "scale(1.1)"};
+            transform: ${
+              isChatOpen ? "rotate(180deg) scale(1.1)" : "scale(1.1)"
+            };
             box-shadow: 0 12px 35px rgba(5, 85, 92, 0.6);
           }
 
@@ -1260,7 +1259,8 @@ function Services() {
             .ai-chat-badge {
               animation: none !important;
               transition: none !important;
-            }
+            }import { tailwindcss } from '@tailwindcss/vite';
+
           }
         `}</style>
       </div>
